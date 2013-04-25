@@ -14,21 +14,40 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
 
-    <QuickContactBadge
-        android:id="@+id/quickContactBadge1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView1"
-        android:layout_marginRight="41dp"
-        android:layout_marginTop="26dp" />
-
     <RatingBar
         android:id="@+id/ratingBar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/quickContactBadge1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="42dp" />
+
+    <QuickContactBadge
+        android:id="@+id/quickContactBadge1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/textView1" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingBar1"
+        android:layout_below="@+id/ratingBar1"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Welcomo MeetService  I took a minute and you can record for hours of service" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ratingBar1"
+        android:layout_alignLeft="@+id/ratingBar1"
+        android:text="Button" />
 
 </RelativeLayout>
