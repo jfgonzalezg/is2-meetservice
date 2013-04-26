@@ -37,13 +37,4 @@
         client users can access these
         services at the time of the search. " />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="About Of"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
 </RelativeLayout>
