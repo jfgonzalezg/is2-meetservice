@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AboutActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="
+        Our development team has had the
+        intention to create MEETSERVICE,
+        developing this online
+        application is intended to provide
+        users with an assist in the
+        interaction between natural and
+        legal persons in order that the
+        former may have a comprehensive
+        database on the options you have
+        to hire a service for your home
+        (eg electricians, plumbers,
+        architects, etc.), and
+        accordingly can choose the most
+        convenient, while users &apos;
+        customers&apos; may give a rating
+        to the users &apos;contractor&apos;
+        a rating according to some
+        criteria established by us and
+        will serve as a basis for other
+        client users can access these
+        services at the time of the search. " />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="About Of"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
