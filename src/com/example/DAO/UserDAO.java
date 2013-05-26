@@ -28,7 +28,7 @@ public class UserDAO {
     	String name = user.getName();
     	String lastname = user.getLastname();
     	String document = user.getId();
-    	String tel = "0";
+    	String tel = user.getTel();
     	String address = user.getAddress();
     	String email = user.getEmail();
     	String profession = user.getProfession();

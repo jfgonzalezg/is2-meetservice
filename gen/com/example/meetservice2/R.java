@@ -30,13 +30,13 @@ public final class R {
         public static final int button2register=0x7f080005;
         public static final int button3about=0x7f080006;
         public static final int editAddress=0x7f08000e;
-        public static final int editCity=0x7f08000c;
         public static final int editConfirm=0x7f080013;
         public static final int editEmail=0x7f080008;
         public static final int editLast=0x7f080003;
         public static final int editName=0x7f080002;
         public static final int editPass=0x7f080012;
         public static final int editProfession=0x7f08000a;
+        public static final int editTel=0x7f08000c;
         public static final int editUser=0x7f080010;
         public static final int textView1=0x7f080000;
         public static final int textView2=0x7f080001;
@@ -74,6 +74,7 @@ public final class R {
         public static final int profession=0x7f05000c;
         public static final int register=0x7f050005;
         public static final int send=0x7f050010;
+        public static final int tel=0x7f050012;
         public static final int title_activity_about=0x7f050011;
         public static final int title_activity_new_reg=0x7f050008;
         public static final int user=0x7f050003;

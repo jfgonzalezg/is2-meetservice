@@ -5,7 +5,6 @@ import com.example.negocio.User;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -42,9 +41,9 @@ public class NewRegActivity extends Activity {
 		editText = (EditText) findViewById(R.id.editProfession);
 	    txt = editText.getText().toString();
 		user.setProfession(txt);
-		editText = (EditText) findViewById(R.id.editCity);
+		editText = (EditText) findViewById(R.id.editTel);
 	    txt = editText.getText().toString();
-		user.setCity(txt);
+		user.setTel(txt);
 		editText = (EditText) findViewById(R.id.editAddress);
 	    txt = editText.getText().toString();
 		user.setAddress(txt);

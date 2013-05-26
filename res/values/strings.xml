@@ -19,6 +19,7 @@
     <string name="confirm">Confirm Password</string>
     <string name="send">Send</string>
     <string name="title_activity_about">About</string>
+    <string name="tel">Telephone</string>
 
 
 </resources>
