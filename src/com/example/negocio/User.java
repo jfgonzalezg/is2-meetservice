@@ -2,7 +2,7 @@ package com.example.negocio;
 
 public class User {
 	
-	private long id;
+	private String id;
     private String name;
     private String lastname;
     private String email;
@@ -11,12 +11,13 @@ public class User {
     private String address;
     private String user;
     private String password;
+    private String tel;
  
-    public long getId() {
+    public String getId() {
         return id;
     }
  
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -82,6 +83,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
  
     

@@ -27,7 +27,7 @@ public class NewRegActivity extends Activity {
 	
 	public void registerNew(View view) {
 	    // Do something in response to button
-		UserDAO userdao = new UserDAO(this);
+		UserDAO userdao = new UserDAO();
 		User user = new User();
 		// guardar datos de editfield en user.
 		EditText editText = (EditText) findViewById(R.id.editName);
@@ -56,7 +56,8 @@ public class NewRegActivity extends Activity {
 		user.setPassword(txt);
 		
 		//guardar usuario en base de datos
-		userdao.crearUsuario(user);
+		userdao.setUser(user);
+		userdao.insertUser();
 	}
 
 }

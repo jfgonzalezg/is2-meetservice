@@ -1,48 +1,77 @@
 package com.example.DAO;
 
-import com.example.meetservice2.MySQLiteOpenHelper;
-import com.example.meetservice2.MySQLiteOpenHelper.TablaUsuarios;
-import com.example.negocio.User;
+import java.util.ArrayList;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONException;
+
+import com.example.conexion.RemoteConexion;
+import com.example.negocio.User;
+import com.example.util.HttpPostAux;
 
 public class UserDAO {
 	
-	private SQLiteDatabase db;
-    private MySQLiteOpenHelper dbHelper;
-    private String[] columnas = { TablaUsuarios.COLUMNA_ID,
-            TablaUsuarios.COLUMNA_NAME,TablaUsuarios.COLUMNA_LAST,TablaUsuarios.COLUMNA_EMAIL,
-            TablaUsuarios.COLUMNA_PROF,TablaUsuarios.COLUMNA_CITY,
-            TablaUsuarios.COLUMNA_ADDRESS,TablaUsuarios.COLUMNA_USER,TablaUsuarios.COLUMNA_PASSWORD, };
- 
-    public UserDAO(Context context) {
-        dbHelper = new MySQLiteOpenHelper(context);
+	User user=new User();
+	HttpPostAux post;
+	
+    public UserDAO() {
+        
     }
- 
-    public void open() {
-        db = dbHelper.getWritableDatabase();
-    }
- 
-    public void close() {
-        dbHelper.close();
-    }
- 
-    public void crearUsuario(User us) {
+    
+    
+    public void insertUser(){
+    	String username = user.getName();
+    	String password=user.getPassword();
+    	String name = user.getName();
+    	String lastname = user.getLastname();
+    	String document = user.getId();
+    	String tel = "0";
+    	String address = user.getAddress();
+    	String email = user.getEmail();
+    	String profession = user.getProfession();
     	
-        ContentValues values = new ContentValues();
-        values.put(TablaUsuarios.COLUMNA_NAME, us.getName() );
-        values.put(TablaUsuarios.COLUMNA_NAME, us.getLastname() );
-        values.put(TablaUsuarios.COLUMNA_NAME, us.getEmail() );
-        values.put(TablaUsuarios.COLUMNA_NAME, us.getProfession() );
-        values.put(TablaUsuarios.COLUMNA_NAME, us.getCity() );
-        values.put(TablaUsuarios.COLUMNA_NAME, us.getAddress() );
-        values.put(TablaUsuarios.COLUMNA_NAME, us.getUser() );
-        values.put(TablaUsuarios.COLUMNA_NAME, us.getPassword() );
-        
-        db.insert(TablaUsuarios.TABLA_USUARIOS, null, values);
-        
+    	
+    	ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+    	post = new HttpPostAux();
+    	
+    	poststring.add(new BasicNameValuePair("user", username));
+    	poststring.add(new BasicNameValuePair("password", password));
+    	poststring.add(new BasicNameValuePair("name", name));
+    	poststring.add(new BasicNameValuePair("lastname", lastname));
+    	poststring.add(new BasicNameValuePair("document", document));
+    	poststring.add(new BasicNameValuePair("telephone", tel));
+    	poststring.add(new BasicNameValuePair("address", address));
+    	poststring.add(new BasicNameValuePair("email", email));
+    	poststring.add(new BasicNameValuePair("profession",profession));
+    	JSONArray jdata=post.getServerData(poststring,RemoteConexion.CONNECT_REMOTE_URL+"adduser.php");
+    	    	
     }
+    
+public void deleteUser(String username){
+    	
+    	ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+    	post = new HttpPostAux();
+    	
+    	poststring.add(new BasicNameValuePair("user", username));
+    	
+    	
+    	
+    	JSONArray jdata=post.getServerData(poststring,RemoteConexion.CONNECT_REMOTE_URL+"deleteuser.php"); // no creado aun
+    	    	
+    }
+
+
+public User getUser() {
+	return user;
+}
+
+
+public void setUser(User user) {
+	this.user = user;
+}
+    
  
 }
