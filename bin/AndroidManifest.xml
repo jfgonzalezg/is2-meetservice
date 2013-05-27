@@ -7,8 +7,8 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -31,6 +31,18 @@
         <activity
             android:name="com.example.meetservice2.AboutActivity"
             android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name="com.example.meetservice2.UserMain"
+            android:label="@string/title_activity_user_main" >
+        </activity>
+        <activity
+            android:name="com.example.meetservice2.OfferService"
+            android:label="@string/title_activity_offer_service" >
+        </activity>
+        <activity
+            android:name="com.example.meetservice2.NewServiceOffer"
+            android:label="@string/title_activity_new_service_offer" >
         </activity>
     </application>
 

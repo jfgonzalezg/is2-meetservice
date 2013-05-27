@@ -20,6 +20,12 @@
     <string name="send">Send</string>
     <string name="title_activity_about">About</string>
     <string name="tel">Telephone</string>
-
+    <string name="title_activity_user_main">UserMain</string>
+    <string name="offer">Offer Service</string>
+    <string name="get_button">Search a Service</string>
+    <string name="obtained_button">Obtained Services</string>
+    <string name="title_activity_offer_service">OfferService</string>
+    <string name="offeredNew_button">Offer New</string>
+    <string name="title_activity_new_service_offer">NewServiceOffer</string>
 
 </resources>
