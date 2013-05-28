@@ -44,6 +44,30 @@
             android:name="com.example.meetservice2.NewServiceOffer"
             android:label="@string/title_activity_new_service_offer" >
         </activity>
+        <activity
+            android:name="com.example.meetservice2.ServiceSelectedActivity"
+            android:label="@string/title_activity_service_selected" >
+        </activity>
+        <activity
+            android:name="com.example.meetservice2.SearchActivity"
+            android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name="com.example.meetservice2.SearchResultActivity"
+            android:label="@string/title_activity_search_result"
+            android:parentActivityName="com.example.meetservice2.SearchActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.meetservice2.SearchActivity" />
+        </activity>
+        <activity
+            android:name="com.example.meetservice2.ServicePickedActivity"
+            android:label="@string/title_activity_service_picked"
+            android:parentActivityName="com.example.meetservice2.SearchResultActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.meetservice2.SearchResultActivity" />
+        </activity>
     </application>
 
 </manifest>

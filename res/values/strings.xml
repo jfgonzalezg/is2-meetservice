@@ -27,5 +27,15 @@
     <string name="title_activity_offer_service">OfferService</string>
     <string name="offeredNew_button">Offer New</string>
     <string name="title_activity_new_service_offer">NewServiceOffer</string>
+    <string name="decript">Description</string>
+    <string name="webpage">Webpage</string>
+    <string name="title_activity_service_selected">ServiceSelectedActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="search">Search</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_search_result">SearchResultActivity</string>
+    <string name="title_activity_service_picked">ServicePickedActivity</string>
 
 </resources>

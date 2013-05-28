@@ -10,6 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".NewServiceOffer" >
 
+    <TextView
+        android:id="@+id/textviewselectedservice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Offer Service New"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
@@ -28,15 +35,17 @@
                     android:id="@+id/TextView05"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
+                    android:layout_weight="4.59"
+                    android:text="name" />
 
                 <EditText
                     android:id="@+id/EditText05"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:hint="Service Name" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -48,14 +57,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="Category" />
 
                 <EditText
                     android:id="@+id/EditText04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:hint="Category"  />
             </LinearLayout>
 
             <LinearLayout
@@ -66,15 +76,16 @@
                     android:id="@+id/TextView03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
+                    android:layout_weight="4.15"
+                    android:text="@string/city" />
 
                 <EditText
                     android:id="@+id/EditText03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:hint="City"  />
             </LinearLayout>
 
             <LinearLayout
@@ -86,14 +97,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="@string/tel" />
 
                 <EditText
                     android:id="@+id/EditText02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:hint="@string/tel"  />
             </LinearLayout>
 
             <LinearLayout
@@ -104,15 +116,16 @@
                     android:id="@+id/TextView01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
+                    android:layout_weight="1.24"
+                    android:text="@string/address" />
 
                 <EditText
                     android:id="@+id/EditText01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:hint="@string/address"  />
             </LinearLayout>
 
             <LinearLayout
@@ -120,25 +133,82 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/TextView08"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
+                    android:layout_weight="2"
+                    android:text="@string/email" />
 
                 <EditText
                     android:id="@+id/editText1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10" >
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"  >
 
                     <requestFocus />
                 </EditText>
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/TextView07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/decript" />
+
+                <EditText
+                    android:id="@+id/EditText07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/decript"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/TextView06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.43"
+                    android:text="@string/webpage" />
+
+                <EditText
+                    android:id="@+id/EditText06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/webpage"  />
+            </LinearLayout>
         </LinearLayout>
+
     </ScrollView>
+
+    <TextView
+        android:id="@+id/blank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send" />
+
+   
 
 </LinearLayout>
