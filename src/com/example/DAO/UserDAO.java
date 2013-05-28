@@ -47,8 +47,8 @@ public class UserDAO {
 		poststring.add(new BasicNameValuePair("address", address));
 		poststring.add(new BasicNameValuePair("email", email));
 		poststring.add(new BasicNameValuePair("profession", profession));
-		JSONArray jdata = post.getServerData(poststring,
-				RemoteConexion.CONNECT_REMOTE_URL + "adduser.php");
+		
+		JSONArray jdata = post.getServerData(poststring, RemoteConexion.CONNECT_REMOTE_URL + "adduser.php");
 		
 		if (jdata != null && jdata.length() > 0) {
 			JSONObject json_data;

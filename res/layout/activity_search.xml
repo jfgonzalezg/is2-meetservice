@@ -11,12 +11,12 @@
     tools:context=".SearchActivity" >
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinner1Search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinner2Search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextSearchBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -49,7 +49,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonSearchStartSend"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:text="@string/search" />

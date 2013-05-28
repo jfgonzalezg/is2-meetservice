@@ -1,83 +1,86 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textviewselectedservice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/user" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-    <TextView
-        android:id="@+id/blank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textviewselectedservice"
-        android:layout_marginTop="15dp"
-        android:text="@string/password" />
+        <TextView
+            android:id="@+id/textViewMainUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
 
-    <EditText
-        android:id="@+id/editName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/blank"
-        android:layout_marginLeft="26dp"
-        android:layout_toRightOf="@+id/blank"
-        android:ems="10"
-        android:inputType="textEmailAddress" >
+        <EditText
+            android:id="@+id/editTextMainUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" />
+    </LinearLayout>
 
-        <requestFocus />
-    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-    <EditText
-        android:id="@+id/editLast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editName"
-        android:layout_below="@+id/editName"
-        android:ems="10"
-        android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/textViewMainPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
-    <Button
-        android:id="@+id/button1send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editLast"
-        android:layout_below="@+id/editLast"
-        android:layout_marginTop="34dp"
-        android:text="@string/login"
-        android:onClick="sendLogin" />
+        <EditText
+            android:id="@+id/editTextMainPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPassword" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
 
     <Button
-        android:id="@+id/button2register"
-        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/ButtonMainLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button1send"
-        android:layout_marginTop="101dp"
-        android:layout_toLeftOf="@+id/button1send"
-        android:text="@string/register"
-        android:onClick="newReg" />
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:onClick="sendLogin"
+        android:text="@string/login" />
 
-    <Button
-        android:id="@+id/button3about"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button2register"
-        android:layout_marginLeft="26dp"
-        android:layout_toRightOf="@+id/button1send"
-        android:text="@string/about"
-        android:onClick="aboutView" />
+        android:layout_weight="0.09" >
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textViewMainRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:layout_marginRight="50dp"
+            android:text="@string/register" />
+
+        <TextView
+            android:id="@+id/textViewMainAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="0.10"
+            android:text="@string/about" />
+    </LinearLayout>
+
+</LinearLayout>

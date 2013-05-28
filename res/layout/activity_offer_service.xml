@@ -1,7 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,8 +14,6 @@
         android:id="@+id/scrollView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="52dp" >
 
         <LinearLayout
@@ -26,17 +26,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="248dp" >
             </ListView>
-
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/buttonSend"
+        android:id="@+id/buttonOfferNewService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/scrollView1"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="36dp"
-        android:text="@string/offeredNew_button" />
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="New Service" />
 
-</RelativeLayout>
+</LinearLayout>

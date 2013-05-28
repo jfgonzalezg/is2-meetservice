@@ -37,28 +37,31 @@ public class NewRegActivity extends Activity {
 		UserDAO userdao = new UserDAO();
 		User user = new User();
 		// guardar datos de editfield en user.
-		EditText editText = (EditText) findViewById(R.id.editName);
+		EditText editText = (EditText) findViewById(R.id.editTextRegUserName);
 		String txt = editText.getText().toString();
 		user.setName(txt);
-		editText = (EditText) findViewById(R.id.editLast);
+		
+		editText = (EditText) findViewById(R.id.editTextRegUserLast);
 		txt = editText.getText().toString();
 		user.setLastname(txt);
-		editText = (EditText) findViewById(R.id.editEmail);
+		
+		editText = (EditText) findViewById(R.id.editRegUserEmail);
 		txt = editText.getText().toString();
 		user.setEmail(txt);
-		editText = (EditText) findViewById(R.id.editProfession);
+		
+		editText = (EditText) findViewById(R.id.editRegUserProfession);
 		txt = editText.getText().toString();
 		user.setProfession(txt);
-		editText = (EditText) findViewById(R.id.editTel);
+		editText = (EditText) findViewById(R.id.editRegUserTel);
 		txt = editText.getText().toString();
 		user.setTel(txt);
-		editText = (EditText) findViewById(R.id.editAddress);
+		editText = (EditText) findViewById(R.id.editRegUserAddress);
 		txt = editText.getText().toString();
 		user.setAddress(txt);
-		editText = (EditText) findViewById(R.id.editName);
+		editText = (EditText) findViewById(R.id.editRegUserUser);
 		txt = editText.getText().toString();
-		user.setName(txt);
-		editText = (EditText) findViewById(R.id.editPass);
+		user.setUser(txt);
+		editText = (EditText) findViewById(R.id.editRegUserPass);
 		txt = editText.getText().toString();
 		user.setPassword(txt);
 
@@ -68,9 +71,12 @@ public class NewRegActivity extends Activity {
 
 		if ( userdao.insertUser()== 1) {
 			correctReg();
+			
 		}else {
 			errorReg();			
 		}
+		
+		finish();
 	}
 
 	public void errorReg() {
@@ -86,6 +92,11 @@ public class NewRegActivity extends Activity {
 				"Usuario Registrado Correctamente"+respond, Toast.LENGTH_SHORT);
 		toast.show();
 
+	}
+	
+	public void backlogin(){
+		
+		
 	}
 
 }
