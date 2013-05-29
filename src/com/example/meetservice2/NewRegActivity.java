@@ -79,6 +79,10 @@ public class NewRegActivity extends Activity {
 		editText = (EditText) findViewById(R.id.editRegUserPass);
 		txt = editText.getText().toString();
 		user.setPassword(txt);
+		
+		editText = (EditText) findViewById(R.id.editTextRegUserId);
+		txt = editText.getText().toString();
+		user.setId(txt);
 
 		// guardar usuario en base de datos
 		userdao.setUser(user);
@@ -97,14 +101,14 @@ public class NewRegActivity extends Activity {
 	public void errorReg() {
 
 		Toast toast = Toast.makeText(getApplicationContext(),
-				"Error en Registro...Intente de Nuevo"+respond, Toast.LENGTH_SHORT);
+				"Register Error...Try Again", Toast.LENGTH_SHORT);
 		toast.show();
 
 	}
 	public void correctReg() {
 
 		Toast toast = Toast.makeText(getApplicationContext(),
-				"Usuario Registrado Correctamente"+respond, Toast.LENGTH_SHORT);
+				"User Registered correctly", Toast.LENGTH_SHORT);
 		toast.show();
 
 	}

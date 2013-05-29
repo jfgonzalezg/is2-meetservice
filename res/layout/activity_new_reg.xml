@@ -54,6 +54,26 @@
         android:layout_height="wrap_content" >
 
         <TextView
+            android:id="@+id/textViewRegUserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id / No. Document" />
+
+        <EditText
+            android:id="@+id/editTextRegUserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
