@@ -22,7 +22,7 @@
             android:orientation="vertical" >
 
             <ListView
-                android:id="@+id/listView1"
+                android:id="@+id/listViewOfferlist"
                 android:layout_width="match_parent"
                 android:layout_height="248dp" >
             </ListView>

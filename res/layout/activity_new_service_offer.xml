@@ -32,14 +32,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextView05"
+                    android:id="@+id/TextViewNEWSERVICEOFFERname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="4.59"
                     android:text="name" />
 
                 <EditText
-                    android:id="@+id/EditText05"
+                    android:id="@+id/EditTextNEWSERVICEOFFERname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -53,14 +53,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextView04"
+                    android:id="@+id/TextViewNEWSERVICEOFFERcate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Category" />
 
                 <EditText
-                    android:id="@+id/EditText04"
+                    android:id="@+id/EditTextNEWSERVICEOFFERcate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -73,14 +73,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextView03"
+                    android:id="@+id/TextViewNEWSERVICEOFFERcity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="4.15"
                     android:text="@string/city" />
 
                 <EditText
-                    android:id="@+id/EditText03"
+                    android:id="@+id/EditTextNEWSERVICEOFFERcity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,14 +93,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextView02"
+                    android:id="@+id/TextViewNEWSERVICEOFFErtel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/tel" />
 
                 <EditText
-                    android:id="@+id/EditText02"
+                    android:id="@+id/EditTextNEWSERVICEOFFERtel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -113,14 +113,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextView01"
+                    android:id="@+id/TextViewNEWSERVICEOFFERaddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.24"
                     android:text="@string/address" />
 
                 <EditText
-                    android:id="@+id/EditText01"
+                    android:id="@+id/EditTextNEWSERVICEOFFERaddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -133,14 +133,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextView08"
+                    android:id="@+id/TextViewNEWSERVICEOFFERemail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="@string/email" />
 
                 <EditText
-                    android:id="@+id/editTextSearchBox"
+                    android:id="@+id/editNEWSERVICEOFFERemail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -158,14 +158,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextView07"
+                    android:id="@+id/TextViewNEWSERVICEOFFERdescr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/decript" />
 
                 <EditText
-                    android:id="@+id/EditText07"
+                    android:id="@+id/EditTextNEWSERVICEOFFERdecr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -178,14 +178,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextView06"
+                    android:id="@+id/TextViewNEWSERVICEOFFERwebpa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="4.43"
                     android:text="@string/webpage" />
 
                 <EditText
-                    android:id="@+id/EditText06"
+                    android:id="@+id/EditTextNEWSERVICEOFFERwebpa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -204,11 +204,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/buttonOfferServiceNew"
+        android:id="@+id/buttonNEWSERVICEOFFERsend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/send" />
-
-   
+        android:layout_gravity="center_horizontal"
+        android:text="Send" />
 
 </LinearLayout>

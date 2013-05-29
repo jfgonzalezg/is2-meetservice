@@ -80,6 +80,13 @@ public class UserDAO {
 																		// aun
 
 	}
+	
+	public int login(String user, String password){
+		
+		
+		
+		return 0; 
+	}
 
 	public User getUser() {
 		return user;
@@ -87,6 +94,13 @@ public class UserDAO {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+	
+	public User queryUser(String user, String pass){
+		
+		
+		
+		return null;
 	}
 
 }

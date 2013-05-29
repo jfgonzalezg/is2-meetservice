@@ -12,17 +12,32 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class NewRegActivity extends Activity {
+	private Button send;
 	
-	int respond;
+	private int respond;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_reg);
+		
+		send = (Button) findViewById(R.id.buttonRegUserReg);
+		
+		send.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+					
+				registerNew(v);
+				
+			}
+		});
 	}
 
 	@Override

@@ -21,7 +21,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/TextViewNEWSERVICEOFFERaddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" "
@@ -32,12 +32,15 @@
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editTextSearchBox"
-            android:layout_width="match_parent"
+            android:id="@+id/editTextSEARCHAsearchbox"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Search Keywords (Optional)" />
+            android:hint="Search Keywords (Optional)" >
+
+            <requestFocus />
+        </EditText>
 
     </LinearLayout>
 

@@ -23,7 +23,7 @@ public class SearchActivity extends Activity {
 		
 		city = (Spinner) findViewById(R.id.spinner1Search);
 		category = (Spinner) findViewById(R.id.spinner2Search);
-		searchbox = (EditText) findViewById(R.id.editTextSearchBox);
+		searchbox = (EditText) findViewById(R.id.editNEWSERVICEOFFERemail);
 		searchbut = (Button) findViewById(R.id.buttonSearchStartSend);
 		searchbut.setOnClickListener(new OnClickListener() {
 			
