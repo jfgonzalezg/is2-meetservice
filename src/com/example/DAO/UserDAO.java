@@ -19,13 +19,13 @@ public class UserDAO {
 	int respond;
 
 	public UserDAO() {
-		 user = new User();
+		user = new User();
 	}
 
 	public int insertUser() {
 		respond = 0;
-		
-		String username = user.getName();
+
+		String username = user.getUser();
 		String password = user.getPassword();
 		String name = user.getName();
 		String lastname = user.getLastname();
@@ -47,21 +47,22 @@ public class UserDAO {
 		poststring.add(new BasicNameValuePair("address", address));
 		poststring.add(new BasicNameValuePair("email", email));
 		poststring.add(new BasicNameValuePair("profession", profession));
-		
-		JSONArray jdata = post.getServerData(poststring, RemoteConexion.CONNECT_REMOTE_URL + "adduser.php");
-		
+
+		JSONArray jdata = post.getServerData(poststring,
+				RemoteConexion.CONNECT_REMOTE_URL + "adduser.php");
+
 		if (jdata != null && jdata.length() > 0) {
 			JSONObject json_data;
-			try{
+			try {
 				json_data = jdata.getJSONObject(0);
 				respond = json_data.getInt("respond");
-				
-			}catch(JSONException e){
+
+			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-					
-			return respond ;
-			
+
+			return respond;
+
 		} else {
 			return 0;
 		}
@@ -80,12 +81,40 @@ public class UserDAO {
 																		// aun
 
 	}
-	
-	public int login(String user, String password){
+
+	public int login(String user, String passwo) {
+		respond = 0;
+
+		String username = user;
+		String password = passwo;
+
+		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+		post = new HttpPostAux();
+
+		poststring.add(new BasicNameValuePair("user", username));
+		poststring.add(new BasicNameValuePair("password", password));
 		
+
+		JSONArray jdata = post.getServerData(poststring,
+				RemoteConexion.CONNECT_REMOTE_URL + "acces.php");
+
+		if (jdata != null && jdata.length() > 0) {
+			JSONObject json_data;
+			try {
+				json_data = jdata.getJSONObject(0);
+				respond = json_data.getInt("logstatus");
+
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+
+			return respond;
+
+		} else {
+			return 0;
+		}
+
 		
-		
-		return 0; 
 	}
 
 	public User getUser() {
@@ -95,11 +124,9 @@ public class UserDAO {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
-	public User queryUser(String user, String pass){
-		
-		
-		
+
+	public User queryUser(String user, String pass) {
+
 		return null;
 	}
 

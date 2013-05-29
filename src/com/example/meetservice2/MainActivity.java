@@ -75,13 +75,13 @@ public class MainActivity extends Activity {
 	}
 	
 	public void sendLogin(View view) {
-		Intent inten=new Intent(MainActivity.this,UserMain.class);
-		startActivity(inten);
+		/*Intent inten=new Intent(MainActivity.this,UserMain.class);
+		startActivity(inten);*/
 		
 		userdao=new UserDAO();
 		
-		int log = userdao.login(edituser.getText().toString(), edipass.getText().toString());
-		if(log == 1){
+		//int log = userdao.login(edituser.getText().toString(), edipass.getText().toString());
+		if(userdao.login(edituser.getText().toString(), edipass.getText().toString()) == 1){
 			Intent intent=new Intent(MainActivity.this,UserMain.class);
 			startActivity(intent);
 			UserGlobal.usersession = userdao.queryUser(edituser.getText().toString(), edipass.getText().toString());

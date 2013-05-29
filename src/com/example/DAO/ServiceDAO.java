@@ -99,13 +99,7 @@ public class ServiceDAO {
 
 	}
 	
-	public int login(String user, String password){
-		
-		
-		
-		return 0; 
-	}
-
+	
 	
 	public Service queryService(String name){
 		
