@@ -16,9 +16,9 @@ public class Service {
 	private int availability;
 	private int num_rating;
 	private int rating_acum;
-	private char admin_state;
-	private int date_start ;
-	private int date_end;
+	private String admin_state;
+	private Date date_start ;
+	private Date date_end;
 	
 	
 	public Service(){
@@ -148,32 +148,32 @@ public class Service {
 	}
 
 
-	public char getAdmin_state() {
+	public String getAdmin_state() {
 		return admin_state;
 	}
 
 
-	public void setAdmin_state(char admin_state) {
+	public void setAdmin_state(String admin_state) {
 		this.admin_state = admin_state;
 	}
 
 
-	public int getDate_start() {
+	public Date getDate_start() {
 		return date_start;
 	}
 
 
-	public void setDate_start(int date_start) {
+	public void setDate_start(Date date_start) {
 		this.date_start = date_start;
 	}
 
 
-	public int getDate_end() {
+	public Date getDate_end() {
 		return date_end;
 	}
 
 
-	public void setDate_end(int date_end) {
+	public void setDate_end(Date date_end) {
 		this.date_end = date_end;
 	}
 

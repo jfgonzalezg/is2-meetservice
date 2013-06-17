@@ -10,13 +10,16 @@ import org.json.JSONObject;
 import org.json.JSONException;
 
 import com.example.conexion.RemoteConexion;
+import com.example.negocio.City;
 import com.example.negocio.Service;
 import com.example.negocio.User;
+import com.example.session.UserGlobal;
 import com.example.util.HttpPostAux;
 
 public class ServiceDAO {
 
 	private Service service;
+	private ArrayList<Service> services;
 	private HttpPostAux post;
 	private int respond;
 
@@ -44,9 +47,9 @@ public class ServiceDAO {
 		String city = service.getCity();
 		String email = service.getEmail();
 		String webpage = service.getWebpage();
-		char admin_state = service.getAdmin_state();
-		int date_start = service.getDate_start();
-		int date_end = service.getDate_end();
+		String admin_state = service.getAdmin_state();
+		Date date_start = service.getDate_start();
+		Date date_end = service.getDate_end();
 		int available = service.getAvailability();
 		int numrating=service.getNum_rating();
 		int ratingacum=service.getRating_acum();
@@ -62,6 +65,7 @@ public class ServiceDAO {
 		poststring.add(new BasicNameValuePair("address", address));
 		poststring.add(new BasicNameValuePair("webpage", webpage));
 		poststring.add(new BasicNameValuePair("email", email));
+		
 		
 		
 		JSONArray jdata = post.getServerData(poststring, RemoteConexion.CONNECT_REMOTE_URL + "addservice.php");
@@ -84,7 +88,9 @@ public class ServiceDAO {
 	}
 
 	public void deleteUser(String name,String user, String password) {
-
+		
+		
+		
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
 
@@ -101,11 +107,116 @@ public class ServiceDAO {
 	
 	
 	
-	public Service queryService(String name){
+	public ArrayList<Service> queryServiceAll(){
+		respond = 0;
+		
+		services = new ArrayList<Service>();
+		
+		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+		post = new HttpPostAux();
+
+		poststring.add(new BasicNameValuePair("attrib", null));
+		poststring.add(new BasicNameValuePair("querty", "ALL"));
 		
 		
 		
-		return null;
+		
+		JSONArray jdata = post.getServerData(poststring, RemoteConexion.CONNECT_REMOTE_URL + "queryservice.php");
+		
+		if (jdata != null && jdata.length() > 0) {
+			JSONObject json_data;
+			
+			try {
+				for(int i=0;i<jdata.length();i++){
+				json_data = jdata.getJSONObject(i);
+				Service tmp= new Service();
+				
+				 tmp.setName(json_data.getString("name"));
+				 tmp.setCod(json_data.getString("cod"));
+				 tmp.setAddress(json_data.getString("address"));
+				 tmp.setDescription(json_data.getString("description"));
+				 tmp.setTelephone(json_data.getString("telephone"));
+				 tmp.setCategory(json_data.getString("category"));
+				 tmp.setCity(json_data.getString("city"));
+				 //tmp.setDate_start(json_data.getDate("date_start"));
+				 //tmp.setDate_end(date_end)
+				 tmp.setWebpage(json_data.getString("webpage"));
+				 tmp.setAvailability(json_data.getInt("availability"));
+				 tmp.setNum_rating(json_data.getInt("num_rating"));
+				 tmp.setRating_acum(json_data.getInt("rating_acum"));
+				 tmp.setAdmin_state(json_data.getString("admin_state"));
+				 tmp.setEmail(json_data.getString("email"));
+				 
+				 services.add(tmp);
+				}
+
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+
+			return services;
+
+		} else {
+			return null;
+		}
+		
+	}
+	
+	
+	
+	public ArrayList<Service> queryServiceThis(){
+		respond = 0;
+		
+		services = new ArrayList<Service>();
+		
+		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+		post = new HttpPostAux();
+
+		poststring.add(new BasicNameValuePair("attrib", UserGlobal.usersession.getId()));
+		poststring.add(new BasicNameValuePair("query", "BYUSER"));
+		
+		
+		
+		
+		JSONArray jdata = post.getServerData(poststring, RemoteConexion.CONNECT_REMOTE_URL + "queryservice.php");
+		
+		if (jdata != null && jdata.length() > 0) {
+			JSONObject json_data;
+			
+			try {
+				for(int i=0;i<jdata.length();i++){
+				json_data = jdata.getJSONObject(i);
+				Service tmp= new Service();
+				
+				 tmp.setName(json_data.getString("name"));
+				 tmp.setCod(json_data.getString("cod"));
+				 tmp.setAddress(json_data.getString("address"));
+				 tmp.setDescription(json_data.getString("description"));
+				 tmp.setTelephone(json_data.getString("telephone"));
+				 tmp.setCategory(json_data.getString("category"));
+				 tmp.setCity(json_data.getString("city"));
+				 //tmp.setDate_start(json_data.getDate("date_start"));
+				 //tmp.setDate_end(date_end)
+				 tmp.setWebpage(json_data.getString("webpage"));
+				 tmp.setAvailability(json_data.getInt("availability"));
+				 tmp.setNum_rating(json_data.getInt("num_rating"));
+				 tmp.setRating_acum(json_data.getInt("rating_acum"));
+				 tmp.setAdmin_state(json_data.getString("admin_state"));
+				 tmp.setEmail(json_data.getString("email"));
+				 
+				 services.add(tmp);
+				}
+
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+
+			return services;
+
+		} else {
+			return null;
+		}
+		
 	}
 
 }

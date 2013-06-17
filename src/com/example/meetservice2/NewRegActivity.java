@@ -83,6 +83,9 @@ public class NewRegActivity extends Activity {
 		editText = (EditText) findViewById(R.id.editTextRegUserId);
 		txt = editText.getText().toString();
 		user.setId(txt);
+		
+		user.setRatingacumulado(0);
+		user.setNumrating(0);
 
 		// guardar usuario en base de datos
 		userdao.setUser(user);

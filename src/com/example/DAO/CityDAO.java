@@ -21,7 +21,7 @@ public class CityDAO {
 		city = new City();
 	}
 
-	public ArrayList<City> queryCategoryAll() {
+	public ArrayList<City> queryCityAll() {
 		citys = new ArrayList<City>();
 
 		String name = city.getName();

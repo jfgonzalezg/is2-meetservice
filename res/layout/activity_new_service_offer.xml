@@ -33,17 +33,17 @@
 
                 <TextView
                     android:id="@+id/TextViewNEWSERVICEOFFERname"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.59"
+                    android:layout_weight="1"
                     android:text="name" />
 
                 <EditText
                     android:id="@+id/EditTextNEWSERVICEOFFERname"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
+                    
                     android:hint="Service Name" />
 
             </LinearLayout>
@@ -54,18 +54,19 @@
 
                 <TextView
                     android:id="@+id/TextViewNEWSERVICEOFFERcate"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Category" />
 
                 <EditText
                     android:id="@+id/EditTextNEWSERVICEOFFERcate"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="Category"  />
+                    
+                    android:hint="Category" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -74,18 +75,19 @@
 
                 <TextView
                     android:id="@+id/TextViewNEWSERVICEOFFERcity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.15"
+                    android:layout_weight="1"
                     android:text="@string/city" />
 
                 <EditText
                     android:id="@+id/EditTextNEWSERVICEOFFERcity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="City"  />
+                   
+                    android:hint="City" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -94,17 +96,17 @@
 
                 <TextView
                     android:id="@+id/TextViewNEWSERVICEOFFErtel"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/tel" />
 
                 <EditText
                     android:id="@+id/EditTextNEWSERVICEOFFERtel"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
+                    
                     android:hint="@string/tel"  />
             </LinearLayout>
 
@@ -114,17 +116,17 @@
 
                 <TextView
                     android:id="@+id/TextViewNEWSERVICEOFFERaddress"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.24"
+                    android:layout_weight="1"
                     android:text="@string/address" />
 
                 <EditText
                     android:id="@+id/EditTextNEWSERVICEOFFERaddress"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
+                    
                     android:hint="@string/address"  />
             </LinearLayout>
 
@@ -134,17 +136,17 @@
 
                 <TextView
                     android:id="@+id/TextViewNEWSERVICEOFFERemail"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:text="@string/email" />
 
                 <EditText
                     android:id="@+id/editNEWSERVICEOFFERemail"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
+                    
                     android:inputType="textEmailAddress"
                     android:hint="@string/email"  >
 
@@ -159,17 +161,17 @@
 
                 <TextView
                     android:id="@+id/TextViewNEWSERVICEOFFERdescr"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/decript" />
 
                 <EditText
                     android:id="@+id/EditTextNEWSERVICEOFFERdecr"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
+                    
                     android:hint="@string/decript"  />
             </LinearLayout>
 
@@ -179,17 +181,17 @@
 
                 <TextView
                     android:id="@+id/TextViewNEWSERVICEOFFERwebpa"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.43"
+                    android:layout_weight="1"
                     android:text="@string/webpage" />
 
                 <EditText
                     android:id="@+id/EditTextNEWSERVICEOFFERwebpa"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
+                    
                     android:hint="@string/webpage"  />
             </LinearLayout>
         </LinearLayout>

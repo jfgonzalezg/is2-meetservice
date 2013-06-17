@@ -36,7 +36,7 @@ public class CategoryDAO {
 		
 		
 		JSONArray jdata = post.getServerData(null,
-				RemoteConexion.CONNECT_REMOTE_URL + "quertycategory.php");
+				RemoteConexion.CONNECT_REMOTE_URL + "querycategory.php");
 
 		if (jdata != null && jdata.length() > 0) {
 			JSONObject json_data;

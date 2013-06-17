@@ -1,5 +1,7 @@
 package com.example.meetservice2;
 
+import com.example.session.UserGlobal;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class UserMain extends Activity {
 	
@@ -24,7 +27,9 @@ public class UserMain extends Activity {
 		search = (Button) findViewById(R.id.buttonMainUserSearch);
 		obtainedservice = (Button) findViewById(R.id.buttonMainUserObtained);
 		
-		
+		/*Toast toast = Toast.makeText(getApplicationContext(),
+				UserGlobal.usersession.getId()+"...Try Again", Toast.LENGTH_SHORT);
+		toast.show();*/
 		offer.setOnClickListener(new OnClickListener() {
 			
 			@Override

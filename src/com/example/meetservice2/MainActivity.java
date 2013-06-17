@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
 			
 		}else {
 			Toast toast = Toast.makeText(getApplicationContext(),
-					"User or Password incorrect...Intente de Nuevo", Toast.LENGTH_SHORT);
+					"User or Password incorrect...Try Again", Toast.LENGTH_SHORT);
 			toast.show();
 			
 		}

@@ -12,8 +12,26 @@ public class User {
     private String user;
     private String password;
     private String tel;
+    private int numrating;
+    private int ratingacumulado;
  
-    public String getId() {
+    public int getNumrating() {
+		return numrating;
+	}
+
+	public void setNumrating(int numrating) {
+		this.numrating = numrating;
+	}
+
+	public int getRatingacumulado() {
+		return ratingacumulado;
+	}
+
+	public void setRatingacumulado(int ratingacumulado) {
+		this.ratingacumulado = ratingacumulado;
+	}
+
+	public String getId() {
         return id;
     }
  
