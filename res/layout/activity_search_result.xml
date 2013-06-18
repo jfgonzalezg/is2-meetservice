@@ -17,34 +17,32 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textView1name"
+            android:id="@+id/textViewSearchResultOrder"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Order By"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:layout_height="61dp"
+            android:text="ORDER BY"
+            android:textSize="30dp" />
 
         <Spinner
-            android:id="@+id/spinner1Search1"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp" />
-
-        <Spinner
-            android:id="@+id/Spinner2"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp" />
-
-        <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spinnerSearchResultqualify"
             android:layout_width="match_parent"
             android:layout_height="34dp" />
+
+        <Spinner
+            android:id="@+id/spinnerSearchResultavailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textViewMainPass"
-        android:layout_width="288dp"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:id="@+id/textViewSearchResultBord"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:text="SERVICES SEARCH RESULT"
+        android:textSize="30dp" />
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -57,9 +55,9 @@
             android:orientation="vertical" >
 
             <ListView
-                android:id="@+id/listViewOfferServicelist"
+                android:id="@+id/listViewSearchResultlistservice"
                 android:layout_width="match_parent"
-                android:layout_height="250dp" >
+                android:layout_height="wrap_content" >
             </ListView>
 
         </LinearLayout>
