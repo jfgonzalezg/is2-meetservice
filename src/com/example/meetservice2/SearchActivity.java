@@ -1,9 +1,12 @@
 package com.example.meetservice2;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import com.example.DAO.CategoryDAO;
 import com.example.DAO.CityDAO;
+import com.example.negocio.Category;
 import com.example.negocio.City;
 
 import android.os.Bundle;
@@ -17,48 +20,75 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class SearchActivity extends Activity {
-	
-	Spinner city;
-	Spinner category;
-	EditText searchbox;
-	Button searchbut;
+
+	private Spinner city;
+	private Spinner category;
+	private EditText searchbox;
+	private Button searchbut;
+	private CityDAO citydao;
+	private CategoryDAO categdao;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search);
-		
-		city = (Spinner) findViewById(R.id.spinner1Search);
-		category = (Spinner) findViewById(R.id.spinner2Search);
+
+		city = (Spinner) findViewById(R.id.spinner1Search1);
+		category = (Spinner) findViewById(R.id.spinner2Search2);
 		searchbox = (EditText) findViewById(R.id.editNEWSERVICEOFFERemail);
 		searchbut = (Button) findViewById(R.id.buttonSearchStartSend);
 		searchbut.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				
+
 			}
 		});
+
 		
+		//Spinner City Define
+		citydao = new CityDAO();
 		
-		/*CityDAO citydao = new CityDAO();
-		List<String> list = new ArrayList<String>();
-		ArrayList<City> citys = citydao.queryCategoryAll();
-		
-		for(int i = 0 ; i<citys.size();i++){
-		list.add(citys.get(i).getName());
+		ArrayList<City> citys = citydao.queryCityAll();
+		String list[] = new String[citys.size()];
+		int i =0;
+		for (Iterator iterator = citys.iterator(); iterator.hasNext();) {
+			City city = (City) iterator.next();
+			list[i] = city.getName();
+			i++;
 		}
+		
+		
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-			android.R.layout.simple_spinner_item, list);
+				android.R.layout.simple_spinner_item, list);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		
+
 		city.setAdapter(dataAdapter);
-		*/
+		
+		//Spinner Category Define
+		categdao = new CategoryDAO();
+		
+		ArrayList<Category> categs = categdao.queryCategoryAll();
+		String list2[] = new String[categs.size()];
+		
+		i =0;
+		for (Iterator iterator = categs.iterator(); iterator.hasNext();) {
+			Category cat = (Category) iterator.next();
+			list2[i] = cat.getName();
+			i++;
+		}
 		
 		
-		//city.setAdapter(adapter)
+		ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this,
+				android.R.layout.simple_spinner_item, list2);
+		dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+		category.setAdapter(dataAdapter2);
 		
+
+		
+
 	}
 
 	@Override

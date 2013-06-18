@@ -2,7 +2,10 @@ package com.example.negocio;
 
 import java.util.Date;
 
-public class Service {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Service{
 	
 	private String name;
 	private String address;
@@ -176,6 +179,9 @@ public class Service {
 	public void setDate_end(Date date_end) {
 		this.date_end = date_end;
 	}
+
+
+	
 
 
 

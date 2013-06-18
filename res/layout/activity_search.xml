@@ -11,12 +11,12 @@
     tools:context=".SearchActivity" >
 
     <Spinner
-        android:id="@+id/spinner1Search"
+        android:id="@+id/spinner1Search1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Spinner
-        android:id="@+id/spinner2Search"
+        android:id="@+id/spinner2Search2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

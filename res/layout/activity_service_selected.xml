@@ -14,7 +14,7 @@
         android:id="@+id/textViewSELECTEDSERVICEtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Large Text"
+        android:text="Opciones"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -25,10 +25,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ListView
-        android:id="@+id/listViewOfferlist"
+        android:id="@+id/listViewServiceSelectedlist"
         android:layout_width="match_parent"
-        android:layout_height="329dp"
-        android:layout_weight="0.12" >
+        android:layout_height="583dp"
+        android:layout_weight="0.51" >
     </ListView>
 
 </LinearLayout>

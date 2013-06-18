@@ -3,6 +3,7 @@ package com.example.DAO;
 import java.util.ArrayList;
 
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,10 +30,11 @@ public class CityDAO {
 		
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
-
+		
+		poststring.add(new BasicNameValuePair("?", "?"));
 		
 		
-		JSONArray jdata = post.getServerData(null,
+		JSONArray jdata = post.getServerData(poststring,
 				RemoteConexion.CONNECT_REMOTE_URL + "querycity.php");
 
 		if (jdata != null && jdata.length() > 0) {
