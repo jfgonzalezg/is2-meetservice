@@ -1,7 +1,7 @@
 package com.example.async;
 
 
-import com.example.meetservice2.NewRegActivity;
+import meetservice.NewRegActivity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
