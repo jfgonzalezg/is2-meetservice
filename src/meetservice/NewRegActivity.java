@@ -1,6 +1,6 @@
 package meetservice;
 
-import session.UserGlobal;
+
 
 import com.example.meetservice2.R;
 
@@ -12,10 +12,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.app.Activity;
-import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,7 +23,7 @@ import android.widget.Toast;
 public class NewRegActivity extends Activity {
 	private Button send;
 
-	private int respond;
+
 	private UserDAO userdao;
 	private User user;
 	private ProgressDialog pDialog;

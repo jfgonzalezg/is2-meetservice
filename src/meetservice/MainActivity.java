@@ -1,9 +1,17 @@
 package meetservice;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import business.Category;
+import business.City;
+
 import com.example.meetservice2.R;
 
 import session.UserGlobal;
 
+import dao.CategoryDAO;
+import dao.CityDAO;
 import dao.UserDAO;
 
 import android.os.AsyncTask;
@@ -26,9 +34,15 @@ public class MainActivity extends Activity {
 	private TextView labelabout;
 	private Button loginbut;
 	private UserDAO userdao;
+	private CategoryDAO categdao;
+	private CityDAO citydao;
 	private EditText edituser;
 	private EditText edipass;
 	private ProgressDialog pDialog;
+	private ArrayList<Category> categs;
+	private ArrayList<City> citys;
+	private String[] list;
+	private String[] list2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +78,9 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 
-				//sendLogin(arg0);
+				// sendLogin(arg0);
 				new AsyncLogin().execute("?");
-				
+
 			}
 		});
 
@@ -79,31 +93,26 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-	public void sendLogin(View view) {
-		/*
-		 * Intent inten=new Intent(MainActivity.this,UserMain.class);
-		 * startActivity(inten);
-		 */
-
-		userdao = new UserDAO();
-
-		// int log = userdao.login(edituser.getText().toString(),
-		// edipass.getText().toString());
-		if (userdao.login(edituser.getText().toString(), edipass.getText()
-				.toString()) == 1) {
-			Intent intent = new Intent(MainActivity.this, UserMain.class);
-			startActivity(intent);
-			UserGlobal.usersession = userdao.queryUser(edituser.getText()
-					.toString(), edipass.getText().toString());
-
-		} else {
-			Toast toast = Toast.makeText(getApplicationContext(),
-					"User or Password incorrect...Try Again",
-					Toast.LENGTH_SHORT);
-			toast.show();
-
-		}
-	}
+	/*
+	 * public void sendLogin(View view) {
+	 * 
+	 * 
+	 * userdao = new UserDAO();
+	 * 
+	 * // int log = userdao.login(edituser.getText().toString(), //
+	 * edipass.getText().toString()); if
+	 * (userdao.login(edituser.getText().toString(), edipass.getText()
+	 * .toString()) == 1) { Intent intent = new Intent(MainActivity.this,
+	 * UserMain.class); startActivity(intent); UserGlobal.usersession =
+	 * userdao.queryUser(edituser.getText() .toString(),
+	 * edipass.getText().toString());
+	 * 
+	 * } else { Toast toast = Toast.makeText(getApplicationContext(),
+	 * "User or Password incorrect...Try Again", Toast.LENGTH_SHORT);
+	 * toast.show();
+	 * 
+	 * } }
+	 */
 
 	public void newReg(View view) {
 		// Do something in response to button
@@ -121,6 +130,8 @@ public class MainActivity extends Activity {
 	class AsyncLogin extends AsyncTask<String, String, String> {
 
 		protected void onPreExecute() {
+			categdao = new CategoryDAO();
+			citydao = new CityDAO();
 			userdao = new UserDAO();
 			pDialog = new ProgressDialog(MainActivity.this);
 			pDialog.setMessage("logining...");
@@ -137,9 +148,13 @@ public class MainActivity extends Activity {
 			// edipass.getText().toString());
 			if (userdao.login(edituser.getText().toString(), edipass.getText()
 					.toString()) == 1) {
-				
+
 				UserGlobal.usersession = userdao.queryUser(edituser.getText()
 						.toString(), edipass.getText().toString());
+				categs = categdao.queryCategoryAll();
+
+				citys = citydao.queryCityAll();
+
 				return "ok";
 
 			} else {
@@ -151,13 +166,34 @@ public class MainActivity extends Activity {
 		}
 
 		protected void onPostExecute(String result) {
+
 			pDialog.dismiss();
 
 			if (result.equals("ok")) {
+				list2 = new String[categs.size()];
+				list = new String[citys.size()];
+
+				int i = 0;
+				for (Iterator<City> iterator = citys.iterator(); iterator
+						.hasNext();) {
+					City city = (City) iterator.next();
+					list[i] = city.getName();
+					i++;
+				}
+
+				i = 0;
+				for (Iterator<Category> iterator = categs.iterator(); iterator
+						.hasNext();) {
+					Category cat = (Category) iterator.next();
+					list2[i] = cat.getName();
+					i++;
+				}
 				
+				
+				UserGlobal.citys=list;
+				UserGlobal.categorys=list2;
 				Intent intent = new Intent(MainActivity.this, UserMain.class);
 				startActivity(intent);
-				
 
 			} else {
 

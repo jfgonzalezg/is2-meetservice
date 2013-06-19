@@ -176,8 +176,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class id {
         public static final int ButtonMainLogin=0x7f09000d;
         public static final int EditTextNEWSERVICEOFFERaddress=0x7f09002f;
-        public static final int EditTextNEWSERVICEOFFERcate=0x7f090029;
-        public static final int EditTextNEWSERVICEOFFERcity=0x7f09002b;
         public static final int EditTextNEWSERVICEOFFERdecr=0x7f090033;
         public static final int EditTextNEWSERVICEOFFERname=0x7f090027;
         public static final int EditTextNEWSERVICEOFFERtel=0x7f09002d;
@@ -227,6 +225,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int scrollView1=0x7f090025;
         public static final int spinner1Search1=0x7f09003a;
         public static final int spinner2Search2=0x7f09003b;
+        public static final int spinnerNewServiceOffercate=0x7f09002b;
+        public static final int spinnerNewServiceOffercity=0x7f090029;
         public static final int spinnerSearchResultavailability=0x7f090041;
         public static final int spinnerSearchResultqualify=0x7f090040;
         public static final int textView1name=0x7f09003d;

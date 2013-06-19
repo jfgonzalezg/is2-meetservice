@@ -59,13 +59,11 @@
                     android:layout_weight="1"
                     android:text="Category" />
 
-                <EditText
-                    android:id="@+id/EditTextNEWSERVICEOFFERcate"
+                <Spinner
+                    android:id="@+id/spinnerNewServiceOffercity"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    
-                    android:hint="Category" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -80,13 +78,11 @@
                     android:layout_weight="1"
                     android:text="@string/city" />
 
-                <EditText
-                    android:id="@+id/EditTextNEWSERVICEOFFERcity"
+                <Spinner
+                    android:id="@+id/spinnerNewServiceOffercate"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                   
-                    android:hint="City" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
