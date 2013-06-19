@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+            android:id="@+id/textViewComentario"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Comentario" />
+    	
+	<EditText android:id="@+id/txtOpine" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+	
+	<TextView
+            android:id="@+id/textViewCalificacion"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Califique el servicio" />
+			
+	<RadioGroup android:id="@+id/rdbpregunta" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<RadioButton android:id="@+id/rdbnumeral1" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Bueno" />
+		<RadioButton android:id="@+id/rdbnumeral2" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Regular" />
+		<RadioButton android:id="@+id/rdbnumeral3" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Malo" />
+	</RadioGroup>
+	    
+
+</LinearLayout>
