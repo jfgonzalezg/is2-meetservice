@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/ContCalificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RecomendacionCalificacion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:text="Continuar" />
+
+    <TextView
+        android:id="@+id/RecomendacionCalificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:text="Para calificar el servicio por favor escoja una de las opciones de 1 a 5,siendo 5 la mejor calificacion y 1 la peor, de cada uno de los items, tega en cuenta que su opinion es muy importante paranosotros, así que hagalo de forma critica y objetiva"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

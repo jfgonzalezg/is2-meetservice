@@ -68,6 +68,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.meetservice2.SearchResultActivity" />
         </activity>
+        <activity
+            android:name="com.example.meetservice2.RecomendacionCalificacionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_recomendacion_calificacion"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
     </application>
 
 </manifest>

@@ -37,5 +37,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_search_result">SearchResultActivity</string>
     <string name="title_activity_service_picked">ServicePickedActivity</string>
+    <string name="title_activity_recomendacion_calificacion">RecomendacionCalificacionActivity</string>
 
 </resources>
