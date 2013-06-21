@@ -17,7 +17,7 @@
     <string name="address">Address</string>
     <string name="city">City</string>
     <string name="confirm">Confirm Password</string>
-    <string name="send">Send</string>
+    <string name="send">Enviar</string>
     <string name="title_activity_about">About</string>
     <string name="tel">Telephone</string>
     <string name="title_activity_user_main">UserMain</string>
@@ -38,5 +38,18 @@
     <string name="title_activity_search_result">SearchResultActivity</string>
     <string name="title_activity_service_picked">ServicePickedActivity</string>
     <string name="title_activity_recomendacion_calificacion">RecomendacionCalificacionActivity</string>
+    <string name="mensaje_error_calificaciones">Una o más items no han sido calificados, por favor verifique antes de continuar</string>
+    <string name="puntualidad">Puntualidad:</string>
+    <string name="calidad">Calidad del Servicio:</string>
+    <string name="cumplimiento">Cumplimiento del servicio:</string>
+    <string name="atencion">Atencion durante el servicio:</string>
+    <string name="costo">Costo del servicio:</string>
+    <string name="comentarios">Comentarios:</string>
+    <string name="calificar_servicio">CALIFICAR SERVICIO</string>
+    <string name="uno">1</string>
+    <string name="dos">2</string>
+    <string name="tres">3</string>
+    <string name="cuatro">4</string>
+    <string name="cinco">5</string>
 
 </resources>
