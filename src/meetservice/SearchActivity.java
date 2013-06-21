@@ -30,7 +30,7 @@ public class SearchActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search);
-		search = new String[3];
+		search = new String[5];
 
 		city = (Spinner) findViewById(R.id.spinner1Search1);
 		category = (Spinner) findViewById(R.id.spinner2Search2);
@@ -104,6 +104,8 @@ public class SearchActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				search[2] = searchbox.getText().toString()+"";
+				search[3] = "0";
+				search[4] = "0";
 				
 				Intent intent=new Intent(SearchActivity.this,SearchResultActivity.class);
 				intent.putExtra("searcharg", search);

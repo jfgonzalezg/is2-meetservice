@@ -41,11 +41,9 @@ public class OfferService extends Activity {
 
 		setContentView(R.layout.activity_offer_service);
 
-		
 		AsyncLoadOptions async = new AsyncLoadOptions(this);
 		async.execute("?");
-		
-		
+
 	}
 
 	@Override
@@ -83,54 +81,55 @@ public class OfferService extends Activity {
 		@Override
 		protected String doInBackground(String... params) {
 			servicess = servdao.queryServiceThis();
-			
+
 			return "ok";
 		}
 
 		protected void onPostExecute(String result) {
+			if (servicess != null) {
 
-			opciones = new String[servicess.size()];
+				opciones = new String[servicess.size()];
 
-			
-			int i = 0;
-			for (Iterator<Service> iterator = servicess.iterator(); iterator
-					.hasNext();) {
-				Service service = (Service) iterator.next();
-				opciones[i] = service.getName();
+				int i = 0;
+				for (Iterator<Service> iterator = servicess.iterator(); iterator
+						.hasNext();) {
+					Service service = (Service) iterator.next();
+					opciones[i] = service.getName();
 
-				i++;
-			}
+					i++;
+				}
 
-			
+				listview.setAdapter(new ArrayAdapter<String>(mcontext,
+						android.R.layout.simple_list_item_1, opciones));
 
-			listview.setAdapter(new ArrayAdapter<String>(mcontext,
-					android.R.layout.simple_list_item_1, opciones));
+				listview.setOnItemClickListener(new OnItemClickListener() {
 
-			listview.setOnItemClickListener(new OnItemClickListener() {
+					@Override
+					public void onItemClick(AdapterView<?> parent, View view,
+							int position, long id) {
 
-				@Override
-				public void onItemClick(AdapterView<?> parent, View view,
-						int position, long id) {
+						for (Iterator<Service> iterator = servicess.iterator(); iterator
+								.hasNext();) {
 
-					for (Iterator<Service> iterator = servicess.iterator(); iterator
-							.hasNext();) {
+							Service service = (Service) iterator.next();
 
-						Service service = (Service) iterator.next();
+							if (opciones[position].equals(service.getName())) {
+								UserGlobal.serviceactual = service;
+								Intent intent = new Intent(OfferService.this,
+										ServiceSelectedActivity.class);
+								startActivity(intent);
 
-						if (opciones[position].equals(service.getName())) {
-							UserGlobal.serviceactual = service;
-							Intent intent = new Intent(OfferService.this,
-									ServiceSelectedActivity.class);
-							startActivity(intent);
+							}
 
 						}
 
 					}
 
-				}
+				});
 
-			});
+				
 
+			}
 			newservice.setOnClickListener(new OnClickListener() {
 
 				@Override
@@ -141,7 +140,6 @@ public class OfferService extends Activity {
 
 				}
 			});
-
 			pDialog.dismiss();
 
 		}
