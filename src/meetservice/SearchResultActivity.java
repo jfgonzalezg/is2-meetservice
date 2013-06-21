@@ -19,9 +19,9 @@ public class SearchResultActivity extends Activity {
 		// Show the Up button in the action bar.
 
 		
-		/*Bundle bundle = getIntent().getExtras();
+		Bundle bundle = getIntent().getExtras();
 		search = bundle.getStringArray("searcharg");
-		*/
+		
 		
 		
 	}

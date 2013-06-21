@@ -34,7 +34,7 @@ public class SearchActivity extends Activity {
 
 		city = (Spinner) findViewById(R.id.spinner1Search1);
 		category = (Spinner) findViewById(R.id.spinner2Search2);
-		searchbox = (EditText) findViewById(R.id.editNEWSERVICEOFFERemail);
+		searchbox = (EditText) findViewById(R.id.editTextSEARCHAsearchbox);
 		searchbut = (Button) findViewById(R.id.buttonSearchStartSend);
 			
 		// Spinner City Define
@@ -103,10 +103,10 @@ public class SearchActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				search[3] = searchbox.getText().toString();
+				search[2] = searchbox.getText().toString()+"";
 				
 				Intent intent=new Intent(SearchActivity.this,SearchResultActivity.class);
-				//intent.putExtra("searcharg", search);
+				intent.putExtra("searcharg", search);
 				startActivity(intent);
 				
 			}

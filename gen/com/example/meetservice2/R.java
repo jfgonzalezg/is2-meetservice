@@ -9,357 +9,157 @@ package com.example.meetservice2;
 
 public final class R {
     public static final class attr {
-        /** 
-        When set to alignMargins, causes alignment to take place between the outer
-        boundary of a view, as defined by its margins. When set to alignBounds,
-        causes alignment to take place between the edges of the view.
-        The default is alignMargins.
-        See {@link android.widget.GridLayout#setAlignmentMode(int)}.
-        
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>alignBounds</code></td><td>0</td><td>
-            Align the bounds of the children.
-            See {@link android.widget.GridLayout#ALIGN_BOUNDS}.
-            </td></tr>
-<tr><td><code>alignMargins</code></td><td>1</td><td>
-            Align the margins of the children.
-            See {@link android.widget.GridLayout#ALIGN_MARGINS}.
-            </td></tr>
-</table>
-         */
-        public static final int alignmentMode=0x7f010004;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonBarButtonStyle=0x7f01000d;
+        public static final int buttonBarButtonStyle=0x7f010001;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonBarStyle=0x7f01000c;
-        /**  The maximum number of columns to create when automatically positioning children. 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int columnCount=0x7f010002;
-        /** 
-        When set to true, forces column boundaries to appear in the same order
-        as column indices.
-        The default is true.
-        See {@link android.widget.GridLayout#setColumnOrderPreserved(boolean)}.
-        
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int columnOrderPreserved=0x7f010006;
-        /** 
-        The column boundary delimiting the left of the group of cells
-        occupied by this view.
-        
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int layout_column=0x7f010009;
-        /** 
-        The column span: the difference between the right and left
-        boundaries delimiting the group of cells occupied by this view.
-        The default is one.
-        See {@link android.widget.GridLayout.Spec}.
-        
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int layout_columnSpan=0x7f01000a;
-        /** 
-        Gravity specifies how a component should be placed in its group of cells.
-        The default is LEFT | BASELINE.
-        See {@link android.widget.GridLayout.LayoutParams#setGravity(int)}.
-        
-         <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>top</code></td><td>0x30</td><td> Push object to the top of its container, not changing its size. </td></tr>
-<tr><td><code>bottom</code></td><td>0x50</td><td> Push object to the bottom of its container, not changing its size. </td></tr>
-<tr><td><code>left</code></td><td>0x03</td><td> Push object to the left of its container, not changing its size. </td></tr>
-<tr><td><code>right</code></td><td>0x05</td><td> Push object to the right of its container, not changing its size. </td></tr>
-<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place object in the vertical center of its container, not changing its size. </td></tr>
-<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place object in the horizontal center of its container, not changing its size. </td></tr>
-<tr><td><code>fill_horizontal</code></td><td>0x07</td><td> Grow the horizontal size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>center</code></td><td>0x11</td><td> Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
-<tr><td><code>fill</code></td><td>0x77</td><td> Grow the horizontal and vertical size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>clip_vertical</code></td><td>0x80</td><td>
-             Additional option that can be set to have the top and/or bottom edges of
-             the child clipped to its container's bounds.
-             The clip will be based on the vertical gravity: a top gravity will clip the bottom
-             edge, a bottom gravity will clip the top edge, and neither will clip both edges.
-            </td></tr>
-<tr><td><code>clip_horizontal</code></td><td>0x08</td><td>
-             Additional option that can be set to have the left and/or right edges of
-             the child clipped to its container's bounds.
-             The clip will be based on the horizontal gravity: a left gravity will clip the right
-             edge, a right gravity will clip the left edge, and neither will clip both edges.
-            </td></tr>
-<tr><td><code>start</code></td><td>0x00800003</td><td> Push object to the beginning of its container, not changing its size. </td></tr>
-<tr><td><code>end</code></td><td>0x00800005</td><td> Push object to the end of its container, not changing its size. </td></tr>
-</table>
-         */
-        public static final int layout_gravity=0x7f01000b;
-        /**  END MarginLayout layoutparams 
-
-        The row boundary delimiting the top of the group of cells
-        occupied by this view.
-        
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int layout_row=0x7f010007;
-        /** 
-        The row span: the difference between the bottom and top
-        boundaries delimiting the group of cells occupied by this view.
-        The default is one.
-        See {@link android.widget.GridLayout.Spec}.
-        
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int layout_rowSpan=0x7f010008;
-        /** 
-              support versions. All attributes not present in ViewGroup/View are
-              redefined in the support library namespace.
-        
-
-        The orientation property is not used during layout. It is only used to
-        allocate row and column parameters when they are not specified by its children's
-        layout parameters. GridLayout works like LinearLayout in this case;
-        putting all the components either in a single row or in a single column -
-        depending on the value of this flag. In the horizontal case, a columnCount
-        property may be additionally supplied to force new rows to be created when a
-        row is full. The rowCount attribute may be used similarly in the vertical case.
-        The default is horizontal.
-        
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>horizontal</code></td><td>0</td><td> Defines an horizontal widget. </td></tr>
-<tr><td><code>vertical</code></td><td>1</td><td> Defines a vertical widget. </td></tr>
-</table>
-         */
-        public static final int orientation=0x7f010000;
-        /**  The maximum number of rows to create when automatically positioning children. 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int rowCount=0x7f010001;
-        /** 
-        When set to true, forces row boundaries to appear in the same order
-        as row indices.
-        The default is true.
-        See {@link android.widget.GridLayout#setRowOrderPreserved(boolean)}.
-        
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int rowOrderPreserved=0x7f010005;
-        /** 
-        When set to true, tells GridLayout to use default margins when none are specified
-        in a view's layout parameters.
-        The default value is false.
-        See {@link android.widget.GridLayout#setUseDefaultMargins(boolean)}.
-        
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int useDefaultMargins=0x7f010003;
+        public static final int buttonBarStyle=0x7f010000;
     }
     public static final class color {
-        public static final int AliceBlue=0x7f06002c;
-        public static final int AntiqueWhite=0x7f060022;
-        public static final int Aqua=0x7f06007c;
-        public static final int Aquamarine=0x7f060061;
-        public static final int Azure=0x7f06002a;
-        public static final int Beige=0x7f060027;
-        public static final int Bisque=0x7f06000d;
-        public static final int Black=0x7f06008b;
-        public static final int BlanchedAlmond=0x7f06000b;
-        public static final int Blue=0x7f060087;
-        public static final int BlueViolet=0x7f06005a;
-        public static final int Brown=0x7f06004e;
-        public static final int BurlyWood=0x7f060034;
-        public static final int CadetBlue=0x7f06006c;
-        public static final int Chartreuse=0x7f060062;
-        public static final int Chocolate=0x7f06003e;
-        public static final int Coral=0x7f060017;
-        public static final int CornflowerBlue=0x7f06006b;
-        public static final int Cornsilk=0x7f060007;
-        public static final int Crimson=0x7f060037;
-        public static final int Cyan=0x7f06007d;
-        public static final int DarkBlue=0x7f060089;
-        public static final int DarkCyan=0x7f060083;
-        public static final int DarkGoldenrod=0x7f060046;
-        public static final int DarkGray=0x7f06004d;
-        public static final int DarkGreen=0x7f060086;
-        public static final int DarkKhaki=0x7f060043;
-        public static final int DarkMagenta=0x7f060058;
-        public static final int DarkOliveGreen=0x7f06006d;
-        public static final int DarkOrange=0x7f060016;
-        public static final int DarkOrchid=0x7f060051;
-        public static final int DarkRed=0x7f060059;
-        public static final int DarkSalmon=0x7f060031;
-        public static final int DarkSeaGreen=0x7f060056;
-        public static final int DarkSlateBlue=0x7f060070;
-        public static final int DarkSlateGray=0x7f060076;
-        public static final int DarkTurquoise=0x7f060081;
-        public static final int DarkViolet=0x7f060053;
-        public static final int DeepPink=0x7f06001b;
-        public static final int DeepSkyBlue=0x7f060082;
-        public static final int DimGray=0x7f060069;
-        public static final int DodgerBlue=0x7f06007a;
-        public static final int FireBrick=0x7f060047;
-        public static final int FloralWhite=0x7f060005;
-        public static final int ForestGreen=0x7f060078;
-        public static final int Fuchsia=0x7f06001c;
-        public static final int Gainsboro=0x7f060036;
-        public static final int GhostWhite=0x7f060024;
-        public static final int Gold=0x7f060011;
-        public static final int Goldenrod=0x7f060039;
-        public static final int Gray=0x7f06005d;
-        public static final int Green=0x7f060085;
-        public static final int GreenYellow=0x7f06004b;
-        public static final int Honeydew=0x7f06002b;
-        public static final int HotPink=0x7f060018;
-        public static final int IndianRed=0x7f060040;
-        public static final int Indigo=0x7f06006e;
-        public static final int Ivory=0x7f060001;
-        public static final int Khaki=0x7f06002d;
-        public static final int Lavender=0x7f060032;
-        public static final int LavenderBlush=0x7f060009;
-        public static final int LawnGreen=0x7f060063;
-        public static final int LemonChiffon=0x7f060006;
-        public static final int LightBlue=0x7f06004c;
-        public static final int LightCoral=0x7f06002e;
-        public static final int LightCyan=0x7f060033;
-        public static final int LightGoldenrodYellow=0x7f060020;
-        public static final int LightGreen=0x7f060055;
-        public static final int LightGrey=0x7f06003c;
-        public static final int LightPink=0x7f060013;
-        public static final int LightSalmon=0x7f060015;
-        public static final int LightSeaGreen=0x7f060079;
-        public static final int LightSkyBlue=0x7f06005b;
-        public static final int LightSlateGray=0x7f060065;
-        public static final int LightSteelBlue=0x7f060049;
-        public static final int LightYellow=0x7f060002;
-        public static final int Lime=0x7f06007f;
-        public static final int LimeGreen=0x7f060075;
-        public static final int Linen=0x7f060021;
-        public static final int Magenta=0x7f06001d;
-        public static final int Maroon=0x7f060060;
-        public static final int MediumAquamarine=0x7f06006a;
-        public static final int MediumBlue=0x7f060088;
-        public static final int MediumOrchid=0x7f060045;
-        public static final int MediumPurple=0x7f060054;
-        public static final int MediumSeaGreen=0x7f060074;
-        public static final int MediumSlateBlue=0x7f060064;
-        public static final int MediumSpringGreen=0x7f060080;
-        public static final int MediumTurquoise=0x7f06006f;
-        public static final int MediumVioletRed=0x7f060041;
-        public static final int MidnightBlue=0x7f06007b;
-        public static final int MintCream=0x7f060025;
-        public static final int MistyRose=0x7f06000c;
-        public static final int Moccasin=0x7f06000e;
-        public static final int NavajoWhite=0x7f06000f;
-        public static final int Navy=0x7f06008a;
-        public static final int OldLace=0x7f06001f;
-        public static final int Olive=0x7f06005e;
-        public static final int OliveDrab=0x7f060067;
-        public static final int Orange=0x7f060014;
-        public static final int OrangeRed=0x7f06001a;
-        public static final int Orchid=0x7f06003a;
-        public static final int PaleGoldenrod=0x7f06002f;
-        public static final int PaleGreen=0x7f060052;
-        public static final int PaleTurquoise=0x7f06004a;
-        public static final int PaleVioletRed=0x7f060038;
-        public static final int PapayaWhip=0x7f06000a;
-        public static final int PeachPuff=0x7f060010;
-        public static final int Peru=0x7f06003f;
-        public static final int Pink=0x7f060012;
-        public static final int Plum=0x7f060035;
-        public static final int PowderBlue=0x7f060048;
-        public static final int Purple=0x7f06005f;
-        public static final int Red=0x7f06001e;
-        public static final int RosyBrown=0x7f060044;
-        public static final int RoyalBlue=0x7f060072;
-        public static final int SaddleBrown=0x7f060057;
-        public static final int Salmon=0x7f060023;
-        public static final int SandyBrown=0x7f060029;
-        public static final int SeaGreen=0x7f060077;
-        public static final int Seashell=0x7f060008;
-        public static final int Sienna=0x7f06004f;
-        public static final int Silver=0x7f060042;
-        public static final int SkyBlue=0x7f06005c;
-        public static final int SlateBlue=0x7f060068;
-        public static final int SlateGray=0x7f060066;
-        public static final int Snow=0x7f060004;
-        public static final int SpringGreen=0x7f06007e;
-        public static final int SteelBlue=0x7f060071;
-        public static final int Tan=0x7f06003d;
-        public static final int Teal=0x7f060084;
-        public static final int Thistle=0x7f06003b;
-        public static final int Tomato=0x7f060019;
-        public static final int Turquoise=0x7f060073;
-        public static final int Violet=0x7f060030;
-        public static final int Wheat=0x7f060028;
-        public static final int White=0x7f060000;
-        public static final int WhiteSmoke=0x7f060026;
-        public static final int Yellow=0x7f060003;
-        public static final int YellowGreen=0x7f060050;
-        public static final int black_overlay=0x7f06008c;
+        public static final int AliceBlue=0x7f04002c;
+        public static final int AntiqueWhite=0x7f040022;
+        public static final int Aqua=0x7f04007c;
+        public static final int Aquamarine=0x7f040061;
+        public static final int Azure=0x7f04002a;
+        public static final int Beige=0x7f040027;
+        public static final int Bisque=0x7f04000d;
+        public static final int Black=0x7f04008b;
+        public static final int BlanchedAlmond=0x7f04000b;
+        public static final int Blue=0x7f040087;
+        public static final int BlueViolet=0x7f04005a;
+        public static final int Brown=0x7f04004e;
+        public static final int BurlyWood=0x7f040034;
+        public static final int CadetBlue=0x7f04006c;
+        public static final int Chartreuse=0x7f040062;
+        public static final int Chocolate=0x7f04003e;
+        public static final int Coral=0x7f040017;
+        public static final int CornflowerBlue=0x7f04006b;
+        public static final int Cornsilk=0x7f040007;
+        public static final int Crimson=0x7f040037;
+        public static final int Cyan=0x7f04007d;
+        public static final int DarkBlue=0x7f040089;
+        public static final int DarkCyan=0x7f040083;
+        public static final int DarkGoldenrod=0x7f040046;
+        public static final int DarkGray=0x7f04004d;
+        public static final int DarkGreen=0x7f040086;
+        public static final int DarkKhaki=0x7f040043;
+        public static final int DarkMagenta=0x7f040058;
+        public static final int DarkOliveGreen=0x7f04006d;
+        public static final int DarkOrange=0x7f040016;
+        public static final int DarkOrchid=0x7f040051;
+        public static final int DarkRed=0x7f040059;
+        public static final int DarkSalmon=0x7f040031;
+        public static final int DarkSeaGreen=0x7f040056;
+        public static final int DarkSlateBlue=0x7f040070;
+        public static final int DarkSlateGray=0x7f040076;
+        public static final int DarkTurquoise=0x7f040081;
+        public static final int DarkViolet=0x7f040053;
+        public static final int DeepPink=0x7f04001b;
+        public static final int DeepSkyBlue=0x7f040082;
+        public static final int DimGray=0x7f040069;
+        public static final int DodgerBlue=0x7f04007a;
+        public static final int FireBrick=0x7f040047;
+        public static final int FloralWhite=0x7f040005;
+        public static final int ForestGreen=0x7f040078;
+        public static final int Fuchsia=0x7f04001c;
+        public static final int Gainsboro=0x7f040036;
+        public static final int GhostWhite=0x7f040024;
+        public static final int Gold=0x7f040011;
+        public static final int Goldenrod=0x7f040039;
+        public static final int Gray=0x7f04005d;
+        public static final int Green=0x7f040085;
+        public static final int GreenYellow=0x7f04004b;
+        public static final int Honeydew=0x7f04002b;
+        public static final int HotPink=0x7f040018;
+        public static final int IndianRed=0x7f040040;
+        public static final int Indigo=0x7f04006e;
+        public static final int Ivory=0x7f040001;
+        public static final int Khaki=0x7f04002d;
+        public static final int Lavender=0x7f040032;
+        public static final int LavenderBlush=0x7f040009;
+        public static final int LawnGreen=0x7f040063;
+        public static final int LemonChiffon=0x7f040006;
+        public static final int LightBlue=0x7f04004c;
+        public static final int LightCoral=0x7f04002e;
+        public static final int LightCyan=0x7f040033;
+        public static final int LightGoldenrodYellow=0x7f040020;
+        public static final int LightGreen=0x7f040055;
+        public static final int LightGrey=0x7f04003c;
+        public static final int LightPink=0x7f040013;
+        public static final int LightSalmon=0x7f040015;
+        public static final int LightSeaGreen=0x7f040079;
+        public static final int LightSkyBlue=0x7f04005b;
+        public static final int LightSlateGray=0x7f040065;
+        public static final int LightSteelBlue=0x7f040049;
+        public static final int LightYellow=0x7f040002;
+        public static final int Lime=0x7f04007f;
+        public static final int LimeGreen=0x7f040075;
+        public static final int Linen=0x7f040021;
+        public static final int Magenta=0x7f04001d;
+        public static final int Maroon=0x7f040060;
+        public static final int MediumAquamarine=0x7f04006a;
+        public static final int MediumBlue=0x7f040088;
+        public static final int MediumOrchid=0x7f040045;
+        public static final int MediumPurple=0x7f040054;
+        public static final int MediumSeaGreen=0x7f040074;
+        public static final int MediumSlateBlue=0x7f040064;
+        public static final int MediumSpringGreen=0x7f040080;
+        public static final int MediumTurquoise=0x7f04006f;
+        public static final int MediumVioletRed=0x7f040041;
+        public static final int MidnightBlue=0x7f04007b;
+        public static final int MintCream=0x7f040025;
+        public static final int MistyRose=0x7f04000c;
+        public static final int Moccasin=0x7f04000e;
+        public static final int NavajoWhite=0x7f04000f;
+        public static final int Navy=0x7f04008a;
+        public static final int OldLace=0x7f04001f;
+        public static final int Olive=0x7f04005e;
+        public static final int OliveDrab=0x7f040067;
+        public static final int Orange=0x7f040014;
+        public static final int OrangeRed=0x7f04001a;
+        public static final int Orchid=0x7f04003a;
+        public static final int PaleGoldenrod=0x7f04002f;
+        public static final int PaleGreen=0x7f040052;
+        public static final int PaleTurquoise=0x7f04004a;
+        public static final int PaleVioletRed=0x7f040038;
+        public static final int PapayaWhip=0x7f04000a;
+        public static final int PeachPuff=0x7f040010;
+        public static final int Peru=0x7f04003f;
+        public static final int Pink=0x7f040012;
+        public static final int Plum=0x7f040035;
+        public static final int PowderBlue=0x7f040048;
+        public static final int Purple=0x7f04005f;
+        public static final int Red=0x7f04001e;
+        public static final int RosyBrown=0x7f040044;
+        public static final int RoyalBlue=0x7f040072;
+        public static final int SaddleBrown=0x7f040057;
+        public static final int Salmon=0x7f040023;
+        public static final int SandyBrown=0x7f040029;
+        public static final int SeaGreen=0x7f040077;
+        public static final int Seashell=0x7f040008;
+        public static final int Sienna=0x7f04004f;
+        public static final int Silver=0x7f040042;
+        public static final int SkyBlue=0x7f04005c;
+        public static final int SlateBlue=0x7f040068;
+        public static final int SlateGray=0x7f040066;
+        public static final int Snow=0x7f040004;
+        public static final int SpringGreen=0x7f04007e;
+        public static final int SteelBlue=0x7f040071;
+        public static final int Tan=0x7f04003d;
+        public static final int Teal=0x7f040084;
+        public static final int Thistle=0x7f04003b;
+        public static final int Tomato=0x7f040019;
+        public static final int Turquoise=0x7f040073;
+        public static final int Violet=0x7f040030;
+        public static final int Wheat=0x7f040028;
+        public static final int White=0x7f040000;
+        public static final int WhiteSmoke=0x7f040026;
+        public static final int Yellow=0x7f040003;
+        public static final int YellowGreen=0x7f040050;
+        public static final int black_overlay=0x7f04008c;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -368,152 +168,131 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050001;
-        public static final int activity_vertical_margin=0x7f050002;
-        /**  The default gap between components in a layout. 
-         */
-        public static final int default_gap=0x7f050000;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int A1=0x7f04001a;
-        public static final int A2=0x7f04001b;
-        public static final int A3=0x7f04001c;
-        public static final int A4=0x7f04001d;
-        public static final int A5=0x7f04001e;
-        public static final int Aten=0x7f040019;
-        public static final int Atencion=0x7f040018;
-        public static final int ButtonMainLogin=0x7f040043;
-        public static final int C1=0x7f040036;
-        public static final int C2=0x7f040037;
-        public static final int C3=0x7f040038;
-        public static final int C4=0x7f040039;
-        public static final int C5=0x7f04003a;
-        public static final int Cal=0x7f040035;
-        public static final int Calidad=0x7f040034;
-        public static final int Co1=0x7f040028;
-        public static final int Co2=0x7f040029;
-        public static final int Co3=0x7f04002a;
-        public static final int Co4=0x7f04002b;
-        public static final int Co5=0x7f04002c;
-        public static final int Comment=0x7f04003b;
-        public static final int ContCalificacion=0x7f040070;
-        public static final int Cos=0x7f040027;
-        public static final int Costo=0x7f040026;
-        public static final int Cu1=0x7f040021;
-        public static final int Cu2=0x7f040022;
-        public static final int Cu3=0x7f040023;
-        public static final int Cu4=0x7f040024;
-        public static final int Cu5=0x7f040025;
-        public static final int Cum=0x7f040020;
-        public static final int EditTextNEWSERVICEOFFERaddress=0x7f040065;
-        public static final int EditTextNEWSERVICEOFFERdecr=0x7f040069;
-        public static final int EditTextNEWSERVICEOFFERname=0x7f04005d;
-        public static final int EditTextNEWSERVICEOFFERtel=0x7f040063;
-        public static final int EditTextNEWSERVICEOFFERwebpa=0x7f04006b;
-        public static final int LinearLayout1=0x7f04003e;
-        public static final int P1=0x7f04002f;
-        public static final int P2=0x7f040030;
-        public static final int P3=0x7f040031;
-        public static final int P4=0x7f040032;
-        public static final int P5=0x7f040033;
-        public static final int Puntualidad=0x7f04002d;
-        public static final int RecomendacionCalificacion=0x7f040071;
-        public static final int RelativeLayout1=0x7f040013;
-        public static final int Sendbutton=0x7f04003d;
-        public static final int TextViewNEWSERVICEOFFERaddress=0x7f040064;
-        public static final int TextViewNEWSERVICEOFFERcate=0x7f04005e;
-        public static final int TextViewNEWSERVICEOFFERcity=0x7f040060;
-        public static final int TextViewNEWSERVICEOFFERdescr=0x7f040068;
-        public static final int TextViewNEWSERVICEOFFERemail=0x7f040066;
-        public static final int TextViewNEWSERVICEOFFERname=0x7f04005c;
-        public static final int TextViewNEWSERVICEOFFERwebpa=0x7f04006a;
-        public static final int TextViewNEWSERVICEOFFErtel=0x7f040062;
-        public static final int TittleQualify=0x7f040015;
-        public static final int action_settings=0x7f040087;
-        public static final int alignBounds=0x7f040002;
-        public static final int alignMargins=0x7f040003;
-        public static final int blank2=0x7f040082;
-        public static final int bottom=0x7f040005;
-        public static final int buttonMainUserObtained=0x7f040086;
-        public static final int buttonMainUserOffer=0x7f040084;
-        public static final int buttonMainUserSearch=0x7f040085;
-        public static final int buttonNEWSERVICEOFFERsend=0x7f04006d;
-        public static final int buttonOfferNewService=0x7f04006f;
-        public static final int buttonRegUserReg=0x7f04005a;
-        public static final int buttonSearchStartSend=0x7f040076;
-        public static final int buttonsearchservice=0x7f040080;
-        public static final int center=0x7f04000c;
-        public static final int center_horizontal=0x7f04000a;
-        public static final int center_vertical=0x7f040008;
-        public static final int clip_horizontal=0x7f04000f;
-        public static final int clip_vertical=0x7f04000e;
-        public static final int comment1=0x7f04003c;
-        public static final int cumplimiento=0x7f04001f;
-        public static final int editNEWSERVICEOFFERemail=0x7f040067;
-        public static final int editRegUserAddress=0x7f04004d;
-        public static final int editRegUserConfirm=0x7f040059;
-        public static final int editRegUserEmail=0x7f040053;
-        public static final int editRegUserPass=0x7f040057;
-        public static final int editRegUserProfession=0x7f04004f;
-        public static final int editRegUserTel=0x7f040051;
-        public static final int editRegUserUser=0x7f040055;
-        public static final int editTextMainPassword=0x7f040042;
-        public static final int editTextMainUser=0x7f040040;
-        public static final int editTextRegUserId=0x7f04004b;
-        public static final int editTextRegUserLast=0x7f040049;
-        public static final int editTextRegUserName=0x7f040047;
-        public static final int editTextSEARCHAsearchbox=0x7f040074;
-        public static final int end=0x7f040011;
-        public static final int fill=0x7f04000d;
-        public static final int fill_horizontal=0x7f04000b;
-        public static final int fill_vertical=0x7f040009;
-        public static final int horizontal=0x7f040000;
-        public static final int left=0x7f040006;
-        public static final int linearLayout1=0x7f040016;
-        public static final int linearLayout2=0x7f040014;
-        public static final int listViewOfferServicelist=0x7f04006e;
-        public static final int listViewSearchResultlistservice=0x7f04007b;
-        public static final int listViewServiceSelectedlist=0x7f040083;
-        public static final int punt=0x7f04002e;
-        public static final int quickContactBadge1=0x7f04007c;
-        public static final int ratingBar1=0x7f04007d;
-        public static final int relativeLayout2=0x7f040017;
-        public static final int right=0x7f040007;
-        public static final int scrollView1=0x7f04005b;
-        public static final int spinner1Search1=0x7f040072;
-        public static final int spinner2Search2=0x7f040073;
-        public static final int spinnerNewServiceOffercate=0x7f040061;
-        public static final int spinnerNewServiceOffercity=0x7f04005f;
-        public static final int spinnerSearchResultavailability=0x7f040079;
-        public static final int spinnerSearchResultqualify=0x7f040078;
-        public static final int start=0x7f040010;
-        public static final int textView1name=0x7f040075;
-        public static final int textView1names=0x7f04007e;
-        public static final int textView6=0x7f04004c;
-        public static final int textViewMainAbout=0x7f040045;
-        public static final int textViewMainPass=0x7f040041;
-        public static final int textViewMainRegister=0x7f040044;
-        public static final int textViewMainUser=0x7f04003f;
-        public static final int textViewMainreg=0x7f04007f;
-        public static final int textViewRegUser=0x7f040058;
-        public static final int textViewRegUserEmail=0x7f040052;
-        public static final int textViewRegUserId=0x7f04004a;
-        public static final int textViewRegUserLast=0x7f040048;
-        public static final int textViewRegUserName=0x7f040046;
-        public static final int textViewRegUserPass=0x7f040056;
-        public static final int textViewRegUserProfession=0x7f04004e;
-        public static final int textViewRegUserTel=0x7f040050;
-        public static final int textViewRegUserUser=0x7f040054;
-        public static final int textViewSELECTEDSERVICEtitle=0x7f040081;
-        public static final int textViewSearchResultBord=0x7f04007a;
-        public static final int textViewSearchResultOrder=0x7f040077;
-        public static final int textviewMainpass=0x7f04006c;
-        public static final int textviewmainselectedservice=0x7f040012;
-        public static final int top=0x7f040004;
-        public static final int vertical=0x7f040001;
+        public static final int A1=0x7f090007;
+        public static final int A2=0x7f090008;
+        public static final int A3=0x7f090009;
+        public static final int A4=0x7f09000a;
+        public static final int A5=0x7f09000b;
+        public static final int Aten=0x7f090006;
+        public static final int Atencion=0x7f090005;
+        public static final int ButtonMainLogin=0x7f090030;
+        public static final int C1=0x7f090024;
+        public static final int C2=0x7f090025;
+        public static final int C3=0x7f090026;
+        public static final int C4=0x7f090027;
+        public static final int C5=0x7f090028;
+        public static final int Cal=0x7f090023;
+        public static final int Calidad=0x7f090022;
+        public static final int Co1=0x7f090015;
+        public static final int Co2=0x7f090016;
+        public static final int Co3=0x7f090017;
+        public static final int Co4=0x7f090018;
+        public static final int Co5=0x7f090019;
+        public static final int Comment=0x7f090029;
+        public static final int ContCalificacion=0x7f09005d;
+        public static final int Cos=0x7f090014;
+        public static final int Costo=0x7f090013;
+        public static final int Cu1=0x7f09000e;
+        public static final int Cu2=0x7f09000f;
+        public static final int Cu3=0x7f090010;
+        public static final int Cu4=0x7f090011;
+        public static final int Cu5=0x7f090012;
+        public static final int Cum=0x7f09000d;
+        public static final int EditTextNEWSERVICEOFFERaddress=0x7f090052;
+        public static final int EditTextNEWSERVICEOFFERdecr=0x7f090056;
+        public static final int EditTextNEWSERVICEOFFERname=0x7f09004a;
+        public static final int EditTextNEWSERVICEOFFERtel=0x7f090050;
+        public static final int EditTextNEWSERVICEOFFERwebpa=0x7f090058;
+        public static final int LinearLayout1=0x7f090001;
+        public static final int LinearLayout2=0x7f09001a;
+        public static final int P1=0x7f09001d;
+        public static final int P2=0x7f09001e;
+        public static final int P3=0x7f09001f;
+        public static final int P4=0x7f090020;
+        public static final int P5=0x7f090021;
+        public static final int Puntualidad=0x7f09001b;
+        public static final int RecomendacionCalificacion=0x7f09005e;
+        public static final int Sendbutton=0x7f09002b;
+        public static final int TextViewNEWSERVICEOFFERaddress=0x7f090051;
+        public static final int TextViewNEWSERVICEOFFERcate=0x7f09004b;
+        public static final int TextViewNEWSERVICEOFFERcity=0x7f09004d;
+        public static final int TextViewNEWSERVICEOFFERdescr=0x7f090055;
+        public static final int TextViewNEWSERVICEOFFERemail=0x7f090053;
+        public static final int TextViewNEWSERVICEOFFERname=0x7f090049;
+        public static final int TextViewNEWSERVICEOFFERwebpa=0x7f090057;
+        public static final int TextViewNEWSERVICEOFFErtel=0x7f09004f;
+        public static final int TittleQualify=0x7f090003;
+        public static final int action_settings=0x7f090075;
+        public static final int blank2=0x7f090070;
+        public static final int buttonMainUserObtained=0x7f090074;
+        public static final int buttonMainUserOffer=0x7f090072;
+        public static final int buttonMainUserSearch=0x7f090073;
+        public static final int buttonNEWSERVICEOFFERsend=0x7f09005a;
+        public static final int buttonOfferNewService=0x7f09005c;
+        public static final int buttonRegUserReg=0x7f090047;
+        public static final int buttonSearchStartSend=0x7f090063;
+        public static final int buttonsearchservice=0x7f09006e;
+        public static final int comment1=0x7f09002a;
+        public static final int cumplimiento=0x7f09000c;
+        public static final int editNEWSERVICEOFFERemail=0x7f090054;
+        public static final int editRegUserAddress=0x7f09003a;
+        public static final int editRegUserConfirm=0x7f090046;
+        public static final int editRegUserEmail=0x7f090040;
+        public static final int editRegUserPass=0x7f090044;
+        public static final int editRegUserProfession=0x7f09003c;
+        public static final int editRegUserTel=0x7f09003e;
+        public static final int editRegUserUser=0x7f090042;
+        public static final int editTextMainPassword=0x7f09002f;
+        public static final int editTextMainUser=0x7f09002d;
+        public static final int editTextRegUserId=0x7f090038;
+        public static final int editTextRegUserLast=0x7f090036;
+        public static final int editTextRegUserName=0x7f090034;
+        public static final int editTextSEARCHAsearchbox=0x7f090061;
+        public static final int linearLayout1=0x7f090004;
+        public static final int linearLayout2=0x7f090002;
+        public static final int listViewOfferServicelist=0x7f09005b;
+        public static final int listViewSearchResultlistservice=0x7f090069;
+        public static final int listViewServiceSelectedlist=0x7f090071;
+        public static final int punt=0x7f09001c;
+        public static final int quickContactBadge1=0x7f09006a;
+        public static final int ratingBar1=0x7f09006b;
+        public static final int scrollView1=0x7f090048;
+        public static final int scrollViewSEARCHRESULT1=0x7f090068;
+        public static final int spinner1Search1=0x7f09005f;
+        public static final int spinner2Search2=0x7f090060;
+        public static final int spinnerNewServiceOffercate=0x7f09004e;
+        public static final int spinnerNewServiceOffercity=0x7f09004c;
+        public static final int spinnerSearchResultavailability=0x7f090066;
+        public static final int spinnerSearchResultqualify=0x7f090065;
+        public static final int textView1name=0x7f090062;
+        public static final int textView1names=0x7f09006c;
+        public static final int textView6=0x7f090039;
+        public static final int textViewMainAbout=0x7f090032;
+        public static final int textViewMainPass=0x7f09002e;
+        public static final int textViewMainRegister=0x7f090031;
+        public static final int textViewMainUser=0x7f09002c;
+        public static final int textViewMainreg=0x7f09006d;
+        public static final int textViewRegUser=0x7f090045;
+        public static final int textViewRegUserEmail=0x7f09003f;
+        public static final int textViewRegUserId=0x7f090037;
+        public static final int textViewRegUserLast=0x7f090035;
+        public static final int textViewRegUserName=0x7f090033;
+        public static final int textViewRegUserPass=0x7f090043;
+        public static final int textViewRegUserProfession=0x7f09003b;
+        public static final int textViewRegUserTel=0x7f09003d;
+        public static final int textViewRegUserUser=0x7f090041;
+        public static final int textViewSELECTEDSERVICEtitle=0x7f09006f;
+        public static final int textViewSearchResultBord=0x7f090067;
+        public static final int textViewSearchResultOrder=0x7f090064;
+        public static final int textviewMainpass=0x7f090059;
+        public static final int textviewmainselectedservice=0x7f090000;
     }
     public static final class layout {
         public static final int activity_about=0x7f030000;
@@ -530,55 +309,55 @@ containing a value of this type.
         public static final int activity_user_main=0x7f03000b;
     }
     public static final class menu {
-        public static final int about=0x7f090000;
-        public static final int main=0x7f090001;
-        public static final int new_reg=0x7f090002;
-        public static final int new_service_offer=0x7f090003;
-        public static final int offer=0x7f090004;
-        public static final int search=0x7f090005;
-        public static final int search_result=0x7f090006;
-        public static final int service_picked=0x7f090007;
-        public static final int service_selected=0x7f090008;
-        public static final int user_main=0x7f090009;
+        public static final int about=0x7f080000;
+        public static final int main=0x7f080001;
+        public static final int new_reg=0x7f080002;
+        public static final int new_service_offer=0x7f080003;
+        public static final int offer=0x7f080004;
+        public static final int search=0x7f080005;
+        public static final int search_result=0x7f080006;
+        public static final int service_picked=0x7f080007;
+        public static final int service_selected=0x7f080008;
+        public static final int user_main=0x7f080009;
     }
     public static final class string {
-        public static final int about=0x7f070006;
-        public static final int action_settings=0x7f070001;
-        public static final int address=0x7f07000d;
-        public static final int app_name=0x7f070000;
-        public static final int city=0x7f07000e;
-        public static final int confirm=0x7f07000f;
-        public static final int decript=0x7f07001a;
-        public static final int dummy_button=0x7f070020;
-        public static final int dummy_content=0x7f070021;
-        public static final int email=0x7f07000b;
-        public static final int get_button=0x7f070015;
-        public static final int hello_world=0x7f070002;
-        public static final int lastname=0x7f07000a;
-        public static final int login=0x7f070007;
-        public static final int name=0x7f070009;
-        public static final int obtained_button=0x7f070016;
-        public static final int offer=0x7f070014;
-        public static final int offeredNew_button=0x7f070018;
-        public static final int password=0x7f070004;
-        public static final int profession=0x7f07000c;
-        public static final int register=0x7f070005;
-        public static final int search=0x7f07001e;
-        public static final int send=0x7f070010;
-        public static final int tel=0x7f070012;
-        public static final int title_activity_about=0x7f070011;
-        public static final int title_activity_fullscreen=0x7f07001f;
-        public static final int title_activity_new_reg=0x7f070008;
-        public static final int title_activity_new_service_offer=0x7f070019;
-        public static final int title_activity_offer_service=0x7f070017;
-        public static final int title_activity_recomendacion_calificacion=0x7f070024;
-        public static final int title_activity_search=0x7f07001d;
-        public static final int title_activity_search_result=0x7f070022;
-        public static final int title_activity_service_picked=0x7f070023;
-        public static final int title_activity_service_selected=0x7f07001c;
-        public static final int title_activity_user_main=0x7f070013;
-        public static final int user=0x7f070003;
-        public static final int webpage=0x7f07001b;
+        public static final int about=0x7f060006;
+        public static final int action_settings=0x7f060001;
+        public static final int address=0x7f06000d;
+        public static final int app_name=0x7f060000;
+        public static final int city=0x7f06000e;
+        public static final int confirm=0x7f06000f;
+        public static final int decript=0x7f06001a;
+        public static final int dummy_button=0x7f060020;
+        public static final int dummy_content=0x7f060021;
+        public static final int email=0x7f06000b;
+        public static final int get_button=0x7f060015;
+        public static final int hello_world=0x7f060002;
+        public static final int lastname=0x7f06000a;
+        public static final int login=0x7f060007;
+        public static final int name=0x7f060009;
+        public static final int obtained_button=0x7f060016;
+        public static final int offer=0x7f060014;
+        public static final int offeredNew_button=0x7f060018;
+        public static final int password=0x7f060004;
+        public static final int profession=0x7f06000c;
+        public static final int register=0x7f060005;
+        public static final int search=0x7f06001e;
+        public static final int send=0x7f060010;
+        public static final int tel=0x7f060012;
+        public static final int title_activity_about=0x7f060011;
+        public static final int title_activity_fullscreen=0x7f06001f;
+        public static final int title_activity_new_reg=0x7f060008;
+        public static final int title_activity_new_service_offer=0x7f060019;
+        public static final int title_activity_offer_service=0x7f060017;
+        public static final int title_activity_recomendacion_calificacion=0x7f060024;
+        public static final int title_activity_search=0x7f06001d;
+        public static final int title_activity_search_result=0x7f060022;
+        public static final int title_activity_service_picked=0x7f060023;
+        public static final int title_activity_service_selected=0x7f06001c;
+        public static final int title_activity_user_main=0x7f060013;
+        public static final int user=0x7f060003;
+        public static final int webpage=0x7f06001b;
     }
     public static final class style {
         /** 
@@ -605,15 +384,15 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080001;
-        public static final int ButtonBar=0x7f080003;
-        public static final int ButtonBarButton=0x7f080004;
-        public static final int FullscreenActionBarStyle=0x7f080005;
-        public static final int FullscreenTheme=0x7f080002;
+        public static final int AppTheme=0x7f070001;
+        public static final int ButtonBar=0x7f070003;
+        public static final int ButtonBarButton=0x7f070004;
+        public static final int FullscreenActionBarStyle=0x7f070005;
+        public static final int FullscreenTheme=0x7f070002;
     }
     public static final class styleable {
         /** 
@@ -634,7 +413,7 @@ containing a value of this type.
            @see #ButtonBarContainerTheme_buttonBarStyle
          */
         public static final int[] ButtonBarContainerTheme = {
-            0x7f01000c, 0x7f01000d
+            0x7f010000, 0x7f010001
         };
         /**
           <p>This symbol is the offset where the {@link com.example.meetservice2.R.attr#buttonBarButtonStyle}
@@ -656,451 +435,5 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name android:buttonBarStyle
         */
         public static final int ButtonBarContainerTheme_buttonBarStyle = 0;
-        /** Attributes that can be used with a GridLayout.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #GridLayout_alignmentMode com.example.meetservice2:alignmentMode}</code></td><td>
-        When set to alignMargins, causes alignment to take place between the outer
-        boundary of a view, as defined by its margins.</td></tr>
-           <tr><td><code>{@link #GridLayout_columnCount com.example.meetservice2:columnCount}</code></td><td> The maximum number of columns to create when automatically positioning children.</td></tr>
-           <tr><td><code>{@link #GridLayout_columnOrderPreserved com.example.meetservice2:columnOrderPreserved}</code></td><td>
-        When set to true, forces column boundaries to appear in the same order
-        as column indices.</td></tr>
-           <tr><td><code>{@link #GridLayout_orientation com.example.meetservice2:orientation}</code></td><td>
-              support versions.</td></tr>
-           <tr><td><code>{@link #GridLayout_rowCount com.example.meetservice2:rowCount}</code></td><td> The maximum number of rows to create when automatically positioning children.</td></tr>
-           <tr><td><code>{@link #GridLayout_rowOrderPreserved com.example.meetservice2:rowOrderPreserved}</code></td><td>
-        When set to true, forces row boundaries to appear in the same order
-        as row indices.</td></tr>
-           <tr><td><code>{@link #GridLayout_useDefaultMargins com.example.meetservice2:useDefaultMargins}</code></td><td>
-        When set to true, tells GridLayout to use default margins when none are specified
-        in a view's layout parameters.</td></tr>
-           </table>
-           @see #GridLayout_alignmentMode
-           @see #GridLayout_columnCount
-           @see #GridLayout_columnOrderPreserved
-           @see #GridLayout_orientation
-           @see #GridLayout_rowCount
-           @see #GridLayout_rowOrderPreserved
-           @see #GridLayout_useDefaultMargins
-         */
-        public static final int[] GridLayout = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004, 0x7f010005, 0x7f010006
-        };
-        /**
-          <p>
-          @attr description
-          
-        When set to alignMargins, causes alignment to take place between the outer
-        boundary of a view, as defined by its margins. When set to alignBounds,
-        causes alignment to take place between the edges of the view.
-        The default is alignMargins.
-        See {@link android.widget.GridLayout#setAlignmentMode(int)}.
-        
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>alignBounds</code></td><td>0</td><td>
-            Align the bounds of the children.
-            See {@link android.widget.GridLayout#ALIGN_BOUNDS}.
-            </td></tr>
-<tr><td><code>alignMargins</code></td><td>1</td><td>
-            Align the margins of the children.
-            See {@link android.widget.GridLayout#ALIGN_MARGINS}.
-            </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android:alignmentMode
-        */
-        public static final int GridLayout_alignmentMode = 4;
-        /**
-          <p>
-          @attr description
-           The maximum number of columns to create when automatically positioning children. 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:columnCount
-        */
-        public static final int GridLayout_columnCount = 2;
-        /**
-          <p>
-          @attr description
-          
-        When set to true, forces column boundaries to appear in the same order
-        as column indices.
-        The default is true.
-        See {@link android.widget.GridLayout#setColumnOrderPreserved(boolean)}.
-        
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:columnOrderPreserved
-        */
-        public static final int GridLayout_columnOrderPreserved = 6;
-        /**
-          <p>
-          @attr description
-          
-              support versions. All attributes not present in ViewGroup/View are
-              redefined in the support library namespace.
-        
-
-        The orientation property is not used during layout. It is only used to
-        allocate row and column parameters when they are not specified by its children's
-        layout parameters. GridLayout works like LinearLayout in this case;
-        putting all the components either in a single row or in a single column -
-        depending on the value of this flag. In the horizontal case, a columnCount
-        property may be additionally supplied to force new rows to be created when a
-        row is full. The rowCount attribute may be used similarly in the vertical case.
-        The default is horizontal.
-        
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>horizontal</code></td><td>0</td><td> Defines an horizontal widget. </td></tr>
-<tr><td><code>vertical</code></td><td>1</td><td> Defines a vertical widget. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android:orientation
-        */
-        public static final int GridLayout_orientation = 0;
-        /**
-          <p>
-          @attr description
-           The maximum number of rows to create when automatically positioning children. 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:rowCount
-        */
-        public static final int GridLayout_rowCount = 1;
-        /**
-          <p>
-          @attr description
-          
-        When set to true, forces row boundaries to appear in the same order
-        as row indices.
-        The default is true.
-        See {@link android.widget.GridLayout#setRowOrderPreserved(boolean)}.
-        
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:rowOrderPreserved
-        */
-        public static final int GridLayout_rowOrderPreserved = 5;
-        /**
-          <p>
-          @attr description
-          
-        When set to true, tells GridLayout to use default margins when none are specified
-        in a view's layout parameters.
-        The default value is false.
-        See {@link android.widget.GridLayout#setUseDefaultMargins(boolean)}.
-        
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:useDefaultMargins
-        */
-        public static final int GridLayout_useDefaultMargins = 3;
-        /** Attributes that can be used with a GridLayout_Layout.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_height com.example.meetservice2:android_layout_height}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_margin com.example.meetservice2:android_layout_margin}</code></td><td>
-              Specifies extra space on the left, top, right and bottom
-              sides of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_marginBottom com.example.meetservice2:android_layout_marginBottom}</code></td><td>
-              Specifies extra space on the bottom side of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_marginLeft com.example.meetservice2:android_layout_marginLeft}</code></td><td>
-              Specifies extra space on the left side of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_marginRight com.example.meetservice2:android_layout_marginRight}</code></td><td>
-              Specifies extra space on the right side of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_marginTop com.example.meetservice2:android_layout_marginTop}</code></td><td>
-              Specifies extra space on the top side of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_width com.example.meetservice2:android_layout_width}</code></td><td>
-              support versions.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_column com.example.meetservice2:layout_column}</code></td><td>
-        The column boundary delimiting the left of the group of cells
-        occupied by this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_columnSpan com.example.meetservice2:layout_columnSpan}</code></td><td>
-        The column span: the difference between the right and left
-        boundaries delimiting the group of cells occupied by this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_gravity com.example.meetservice2:layout_gravity}</code></td><td>
-        Gravity specifies how a component should be placed in its group of cells.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_row com.example.meetservice2:layout_row}</code></td><td> END MarginLayout layoutparams 
-
-        The row boundary delimiting the top of the group of cells
-        occupied by this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_rowSpan com.example.meetservice2:layout_rowSpan}</code></td><td>
-        The row span: the difference between the bottom and top
-        boundaries delimiting the group of cells occupied by this view.</td></tr>
-           </table>
-           @see #GridLayout_Layout_android_layout_height
-           @see #GridLayout_Layout_android_layout_margin
-           @see #GridLayout_Layout_android_layout_marginBottom
-           @see #GridLayout_Layout_android_layout_marginLeft
-           @see #GridLayout_Layout_android_layout_marginRight
-           @see #GridLayout_Layout_android_layout_marginTop
-           @see #GridLayout_Layout_android_layout_width
-           @see #GridLayout_Layout_layout_column
-           @see #GridLayout_Layout_layout_columnSpan
-           @see #GridLayout_Layout_layout_gravity
-           @see #GridLayout_Layout_layout_row
-           @see #GridLayout_Layout_layout_rowSpan
-         */
-        public static final int[] GridLayout_Layout = {
-            0x010100f4, 0x010100f5, 0x010100f6, 0x010100f7,
-            0x010100f8, 0x010100f9, 0x010100fa, 0x7f010007,
-            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.meetservice2.R.attr#android_layout_height}
-          attribute's value can be found in the {@link #GridLayout_Layout} array.
-          @attr name android:android_layout_height
-        */
-        public static final int GridLayout_Layout_android_layout_height = 1;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the left, top, right and bottom
-              sides of this view. This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute          resource symbol {@link com.example.meetservice2.R.attr#android_layout_margin}.
-          @attr name android:android_layout_margin
-        */
-        public static final int GridLayout_Layout_android_layout_margin = 2;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the bottom side of this view.
-              This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute          resource symbol {@link com.example.meetservice2.R.attr#android_layout_marginBottom}.
-          @attr name android:android_layout_marginBottom
-        */
-        public static final int GridLayout_Layout_android_layout_marginBottom = 6;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the left side of this view.
-              This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute          resource symbol {@link com.example.meetservice2.R.attr#android_layout_marginLeft}.
-          @attr name android:android_layout_marginLeft
-        */
-        public static final int GridLayout_Layout_android_layout_marginLeft = 3;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the right side of this view.
-              This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute          resource symbol {@link com.example.meetservice2.R.attr#android_layout_marginRight}.
-          @attr name android:android_layout_marginRight
-        */
-        public static final int GridLayout_Layout_android_layout_marginRight = 5;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the top side of this view.
-              This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute          resource symbol {@link com.example.meetservice2.R.attr#android_layout_marginTop}.
-          @attr name android:android_layout_marginTop
-        */
-        public static final int GridLayout_Layout_android_layout_marginTop = 4;
-        /**
-          <p>
-          @attr description
-          
-              support versions. All attributes not present in MarginLayout are
-              redefined in the support library name space.
-        
- START MarginLayout layoutparams 
-          <p>This corresponds to the global attribute          resource symbol {@link com.example.meetservice2.R.attr#android_layout_width}.
-          @attr name android:android_layout_width
-        */
-        public static final int GridLayout_Layout_android_layout_width = 0;
-        /**
-          <p>
-          @attr description
-          
-        The column boundary delimiting the left of the group of cells
-        occupied by this view.
-        
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:layout_column
-        */
-        public static final int GridLayout_Layout_layout_column = 9;
-        /**
-          <p>
-          @attr description
-          
-        The column span: the difference between the right and left
-        boundaries delimiting the group of cells occupied by this view.
-        The default is one.
-        See {@link android.widget.GridLayout.Spec}.
-        
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:layout_columnSpan
-        */
-        public static final int GridLayout_Layout_layout_columnSpan = 10;
-        /**
-          <p>
-          @attr description
-          
-        Gravity specifies how a component should be placed in its group of cells.
-        The default is LEFT | BASELINE.
-        See {@link android.widget.GridLayout.LayoutParams#setGravity(int)}.
-        
-
-
-          <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>top</code></td><td>0x30</td><td> Push object to the top of its container, not changing its size. </td></tr>
-<tr><td><code>bottom</code></td><td>0x50</td><td> Push object to the bottom of its container, not changing its size. </td></tr>
-<tr><td><code>left</code></td><td>0x03</td><td> Push object to the left of its container, not changing its size. </td></tr>
-<tr><td><code>right</code></td><td>0x05</td><td> Push object to the right of its container, not changing its size. </td></tr>
-<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place object in the vertical center of its container, not changing its size. </td></tr>
-<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place object in the horizontal center of its container, not changing its size. </td></tr>
-<tr><td><code>fill_horizontal</code></td><td>0x07</td><td> Grow the horizontal size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>center</code></td><td>0x11</td><td> Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
-<tr><td><code>fill</code></td><td>0x77</td><td> Grow the horizontal and vertical size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>clip_vertical</code></td><td>0x80</td><td>
-             Additional option that can be set to have the top and/or bottom edges of
-             the child clipped to its container's bounds.
-             The clip will be based on the vertical gravity: a top gravity will clip the bottom
-             edge, a bottom gravity will clip the top edge, and neither will clip both edges.
-            </td></tr>
-<tr><td><code>clip_horizontal</code></td><td>0x08</td><td>
-             Additional option that can be set to have the left and/or right edges of
-             the child clipped to its container's bounds.
-             The clip will be based on the horizontal gravity: a left gravity will clip the right
-             edge, a right gravity will clip the left edge, and neither will clip both edges.
-            </td></tr>
-<tr><td><code>start</code></td><td>0x00800003</td><td> Push object to the beginning of its container, not changing its size. </td></tr>
-<tr><td><code>end</code></td><td>0x00800005</td><td> Push object to the end of its container, not changing its size. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android:layout_gravity
-        */
-        public static final int GridLayout_Layout_layout_gravity = 11;
-        /**
-          <p>
-          @attr description
-           END MarginLayout layoutparams 
-
-        The row boundary delimiting the top of the group of cells
-        occupied by this view.
-        
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:layout_row
-        */
-        public static final int GridLayout_Layout_layout_row = 7;
-        /**
-          <p>
-          @attr description
-          
-        The row span: the difference between the bottom and top
-        boundaries delimiting the group of cells occupied by this view.
-        The default is one.
-        See {@link android.widget.GridLayout.Spec}.
-        
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:layout_rowSpan
-        */
-        public static final int GridLayout_Layout_layout_rowSpan = 8;
     };
 }
