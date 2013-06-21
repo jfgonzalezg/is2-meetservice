@@ -74,6 +74,18 @@
             android:label="@string/title_activity_recomendacion_calificacion"
             android:theme="@style/FullscreenTheme" >
         </activity>
+        <activity
+            android:name="meetservice.AdminService"
+            android:label="@string/title_activity_admin_service" >
+        </activity>
+        <activity
+            android:name="meetservice.LastListServiceActivity"
+            android:label="@string/title_activity_last_list_service" >
+        </activity>
+        <activity
+            android:name="meetservice.ServiceOption"
+            android:label="@string/title_activity_service_option" >
+        </activity>
     </application>
 
 </manifest>
