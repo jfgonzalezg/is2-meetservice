@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".AdminService" >
+    tools:context=".AdminServiceActivity" >
 
     <Button
         android:id="@+id/buttonADMINSERVICErecord"
@@ -20,6 +20,6 @@
         android:id="@+id/buttonADMINSERVICEgetservices"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Servicios Tomados" />
+        android:text="Servicios Vigentes" />
 
 </LinearLayout>

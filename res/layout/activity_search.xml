@@ -52,7 +52,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/buttonSearchStartSend"
+        android:id="@+id/buttonViewStatistics"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

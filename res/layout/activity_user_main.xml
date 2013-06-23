@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="47dp"
-        android:text="Offer a Service" />
+        android:text="Ofrecer un Servicio" />
 
     <Button
         android:id="@+id/buttonMainUserSearch"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="49dp"
-        android:text="Search a Service" />
+        android:text="Buscar un Servicio" />
 
     <Button
         android:id="@+id/buttonMainUserObtained"
@@ -32,6 +32,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="62dp"
-        android:text="View Services Obtained" />
+        android:text="Ver Servicios Obtenidos" />
 
 </LinearLayout>

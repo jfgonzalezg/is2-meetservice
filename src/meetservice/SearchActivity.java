@@ -35,7 +35,7 @@ public class SearchActivity extends Activity {
 		city = (Spinner) findViewById(R.id.spinner1Search1);
 		category = (Spinner) findViewById(R.id.spinner2Search2);
 		searchbox = (EditText) findViewById(R.id.editTextSEARCHAsearchbox);
-		searchbut = (Button) findViewById(R.id.buttonSearchStartSend);
+		searchbut = (Button) findViewById(R.id.buttonViewStatistics);
 			
 		// Spinner City Define
 		

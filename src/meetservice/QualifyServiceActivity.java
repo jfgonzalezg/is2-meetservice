@@ -18,7 +18,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class CalificationActivity extends Activity {
+public class QualifyServiceActivity extends Activity {
 	
 	private Button sendCalification;
 	private RadioGroup rgPuntualidad, rgCalidad, rgAtencion, rgCulminacion, rgCosto;
@@ -51,7 +51,7 @@ public class CalificationActivity extends Activity {
     }*/
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_calificacion);
+		setContentView(R.layout.activity_qualify_service);
 		rgPuntualidad = (RadioGroup)findViewById(R.id.rbPunt);
 		rbPun01 = (RadioButton)findViewById(R.id.P1); 
 		rbPun02 = (RadioButton)findViewById(R.id.P2);

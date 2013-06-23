@@ -55,7 +55,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <TextView
-                    android:id="@+id/textViewMainPass"
+                    android:id="@+id/textViewServiceDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.41"
@@ -81,7 +81,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonSearchStartSend"
+        android:id="@+id/buttonViewStatistics"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10px"
@@ -89,9 +89,15 @@
         android:text="Estadisticas" />
 
     <Button
-        android:id="@+id/buttonsearchservice"
+        android:id="@+id/buttontakeservice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pedir Servicio" />
+
+    <Button
+        android:id="@+id/buttonqualifyservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calificar Servicio" />
 
 </LinearLayout>

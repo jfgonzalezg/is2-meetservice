@@ -75,11 +75,11 @@
             android:theme="@style/FullscreenTheme" >
         </activity>
         <activity
-            android:name="meetservice.AdminService"
+            android:name="meetservice.AdminServiceActivity"
             android:label="@string/title_activity_admin_service" >
         </activity>
         <activity
-            android:name="meetservice.LastListServiceActivity"
+            android:name="meetservice.CurrentServicesActivity"
             android:label="@string/title_activity_last_list_service" >
         </activity>
         <activity
