@@ -32,8 +32,8 @@ public class ServicePickedActivity extends Activity {
 		bViewStatistics.setOnClickListener(new OnClickListener(){
 			
 			public void onClick(View v){
-				Intent intent = new Intent(ServicePickedActivity.this,ViewStatisticsActivity.class);
-				startActivity(intent);
+				/*Intent intent = new Intent(ServicePickedActivity.this,ViewStatisticsActivity.class);
+				startActivity(intent);*/
 			}
 		});
 		
@@ -42,8 +42,8 @@ public class ServicePickedActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(ServicePickedActivity.this,TakeServiceActivity.class);	
-				startActivity(intent);
+				/*Intent intent = new Intent(ServicePickedActivity.this,TakeServiceActivity.class);	
+				startActivity(intent);*/
 			}			
 		});
 		
@@ -52,8 +52,8 @@ public class ServicePickedActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(ServicePickedActivity.this, QualifyServiceActivity.class);
-				startActivity(intent);
+				/*Intent intent = new Intent(ServicePickedActivity.this, QualifyServiceActivity.class);
+				startActivity(intent);*/
 			}
 		});
 		

@@ -12,6 +12,7 @@ import org.json.JSONException;
 import session.UserGlobal;
 import util.HttpPostAux;
 
+import android.provider.Settings.Global;
 import business.City;
 import business.Service;
 import business.User;
@@ -46,6 +47,7 @@ public class ServiceDAO {
 		String description = service.getDescription();
 		String telephone = service.getTelephone();
 		String category = service.getCategory();
+		String username = UserGlobal.usersession.getUser();  //assigning proprietary of service
 		String city = service.getCity();
 		String email = service.getEmail();
 		String webpage = service.getWebpage();
@@ -67,6 +69,7 @@ public class ServiceDAO {
 		poststring.add(new BasicNameValuePair("address", address));
 		poststring.add(new BasicNameValuePair("webpage", webpage));
 		poststring.add(new BasicNameValuePair("email", email));
+		poststring.add(new BasicNameValuePair("user", username));
 
 		JSONArray jdata = post.getServerData(poststring,
 				RemoteConexion.CONNECT_REMOTE_URL + "addservice.php");
@@ -88,7 +91,7 @@ public class ServiceDAO {
 		}
 	}
 
-	public void deleteUser(String name, String user, String password) {
+	/*public void deleteUser(String name, String user, String password) {
 
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
@@ -102,7 +105,7 @@ public class ServiceDAO {
 																			// creado
 																			// aun
 
-	}
+	}*/
 
 	public ArrayList<Service> queryServiceAll() {
 		respond = 0;
@@ -166,7 +169,60 @@ public class ServiceDAO {
 		post = new HttpPostAux();
 
 		poststring.add(new BasicNameValuePair("attrib", UserGlobal.usersession
-				.getId()));
+				.getUser()));
+		poststring.add(new BasicNameValuePair("query", "BYUSER"));
+
+		JSONArray jdata = post.getServerData(poststring,
+				RemoteConexion.CONNECT_REMOTE_URL + "queryservice.php");
+
+		if (jdata != null && jdata.length() > 0) {
+			JSONObject json_data;
+
+			try {
+				for (int i = 0; i < jdata.length(); i++) {
+					json_data = jdata.getJSONObject(i);
+					Service tmp = new Service();
+
+					tmp.setName(json_data.getString("name"));
+					tmp.setCod(json_data.getString("cod"));
+					tmp.setAddress(json_data.getString("address"));
+					tmp.setDescription(json_data.getString("description"));
+					tmp.setTelephone(json_data.getString("telephone"));
+					tmp.setCategory(json_data.getString("category"));
+					tmp.setCity(json_data.getString("city"));
+					// tmp.setDate_start(json_data.getDate("date_start"));
+					// tmp.setDate_end(date_end)
+					tmp.setWebpage(json_data.getString("webpage"));
+					tmp.setAvailability(json_data.getInt("availability"));
+					tmp.setNum_rating(json_data.getInt("num_rating"));
+					tmp.setRating_acum(json_data.getInt("rating_acum"));
+					tmp.setAdmin_state(json_data.getString("admin_state"));
+					tmp.setEmail(json_data.getString("email"));
+
+					services.add(tmp);
+				}
+
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+
+			return services;
+
+		} else {
+			return null;
+		}
+
+	}
+
+	public ArrayList<Service> queryServiceByUser(String username) {
+		respond = 0;
+
+		services = new ArrayList<Service>();
+
+		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+		post = new HttpPostAux();
+
+		poststring.add(new BasicNameValuePair("attrib", username));
 		poststring.add(new BasicNameValuePair("query", "BYUSER"));
 
 		JSONArray jdata = post.getServerData(poststring,
@@ -297,7 +353,8 @@ public class ServiceDAO {
 		if (categ.equals("ALL")) {
 			poststring.add(new BasicNameValuePair("query", "SALLBYGETS"));
 		} else {
-			poststring.add(new BasicNameValuePair("query", "SALLBYGETSCATEGORY"));
+			poststring
+					.add(new BasicNameValuePair("query", "SALLBYGETSCATEGORY"));
 		}
 
 		poststring.add(new BasicNameValuePair("attrib", text));

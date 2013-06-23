@@ -16,6 +16,17 @@ public class Service{
 	private String city;
 	private String webpage;
 	private String email;
+	private String username;
+	public String getUsername() {
+		return username;
+	}
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
 	private int availability;
 	private int num_rating;
 	private int rating_acum;
