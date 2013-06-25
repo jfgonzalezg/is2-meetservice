@@ -10,13 +10,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.text.format.DateFormat;
-import business.Service;
-import business.User;
-import business.UserService;
-
 import session.UserGlobal;
 import util.HttpPostAux;
+import business.Service;
+import business.UserService;
 import conexion.RemoteConexion;
 
 public class UserServiceDAO {
@@ -137,8 +134,8 @@ public int updateUserService(UserService uservicee ){
 		post = new HttpPostAux();
 
 
-		poststring.add(new BasicNameValuePair("user", username));
-		poststring.add(new BasicNameValuePair("password", UserGlobal.usersession.getPassword()));
+		poststring.add(new BasicNameValuePair("attrib", username));
+		poststring.add(new BasicNameValuePair("query", "USBYUSER"));
 
 		JSONArray jdata = post.getServerData(poststring,
 				RemoteConexion.CONNECT_REMOTE_URL + "queryuserservice.php");//
@@ -176,7 +173,7 @@ public int updateUserService(UserService uservicee ){
 	}
 	
 	
-	public ArrayList<Service> queryServicesGotByUser() {
+	public ArrayList<Service> queryServicesGotByUser(String username) {
 
 
 		services = new ArrayList<Service>();
@@ -185,8 +182,8 @@ public int updateUserService(UserService uservicee ){
 		post = new HttpPostAux();
 
 
-		poststring.add(new BasicNameValuePair("user", UserGlobal.usersession.getUser()));
-		poststring.add(new BasicNameValuePair("password", UserGlobal.usersession.getPassword()));
+		poststring.add(new BasicNameValuePair("attrib", username));
+		poststring.add(new BasicNameValuePair("query", "SBYUSER"));
 
 		JSONArray jdata = post.getServerData(poststring,
 				RemoteConexion.CONNECT_REMOTE_URL + "queryuserservice.php");//

@@ -1,22 +1,16 @@
 package dao;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import session.UserGlobal;
 import util.HttpPostAux;
-
-import android.provider.Settings.Global;
-import business.City;
 import business.Service;
-import business.User;
-
 import conexion.RemoteConexion;
 
 public class ServiceDAO {
@@ -43,7 +37,6 @@ public class ServiceDAO {
 
 		String name = service.getName();
 		String address = service.getAddress();
-		String cod = service.getCod();
 		String description = service.getDescription();
 		String telephone = service.getTelephone();
 		String category = service.getCategory();
@@ -51,12 +44,12 @@ public class ServiceDAO {
 		String city = service.getCity();
 		String email = service.getEmail();
 		String webpage = service.getWebpage();
-		String admin_state = service.getAdmin_state();
+		/*String admin_state = service.getAdmin_state();
 		Date date_start = service.getDate_start();
 		Date date_end = service.getDate_end();
 		int available = service.getAvailability();
 		int numrating = service.getNum_rating();
-		int ratingacum = service.getRating_acum();
+		int ratingacum = service.getRating_acum();*/
 
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
@@ -144,6 +137,8 @@ public class ServiceDAO {
 					tmp.setRating_acum(json_data.getInt("rating_acum"));
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
+					tmp.setUsername(json_data.getString("username"));
+
 
 					services.add(tmp);
 				}
@@ -198,6 +193,7 @@ public class ServiceDAO {
 					tmp.setRating_acum(json_data.getInt("rating_acum"));
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
+					tmp.setUsername(json_data.getString("username"));
 
 					services.add(tmp);
 				}
@@ -251,6 +247,7 @@ public class ServiceDAO {
 					tmp.setRating_acum(json_data.getInt("rating_acum"));
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
+					tmp.setUsername(json_data.getString("username"));
 
 					services.add(tmp);
 				}
@@ -319,6 +316,7 @@ public class ServiceDAO {
 					tmp.setRating_acum(json_data.getInt("rating_acum"));
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
+					tmp.setUsername(json_data.getString("username"));
 
 					services.add(tmp);
 				}
@@ -387,6 +385,7 @@ public class ServiceDAO {
 					tmp.setRating_acum(json_data.getInt("rating_acum"));
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
+					tmp.setUsername(json_data.getString("username"));
 
 					services.add(tmp);
 				}
