@@ -123,7 +123,7 @@ public class ServiceDAO {
 					Service tmp = new Service();
 
 					tmp.setName(json_data.getString("name"));
-					tmp.setCod(json_data.getString("cod"));
+					tmp.setCod(json_data.getInt("cod"));
 					tmp.setAddress(json_data.getString("address"));
 					tmp.setDescription(json_data.getString("description"));
 					tmp.setTelephone(json_data.getString("telephone"));
@@ -179,7 +179,7 @@ public class ServiceDAO {
 					Service tmp = new Service();
 
 					tmp.setName(json_data.getString("name"));
-					tmp.setCod(json_data.getString("cod"));
+					tmp.setCod(json_data.getInt("cod"));
 					tmp.setAddress(json_data.getString("address"));
 					tmp.setDescription(json_data.getString("description"));
 					tmp.setTelephone(json_data.getString("telephone"));
@@ -233,7 +233,7 @@ public class ServiceDAO {
 					Service tmp = new Service();
 
 					tmp.setName(json_data.getString("name"));
-					tmp.setCod(json_data.getString("cod"));
+					tmp.setCod(json_data.getInt("cod"));
 					tmp.setAddress(json_data.getString("address"));
 					tmp.setDescription(json_data.getString("description"));
 					tmp.setTelephone(json_data.getString("telephone"));
@@ -302,7 +302,7 @@ public class ServiceDAO {
 					Service tmp = new Service();
 
 					tmp.setName(json_data.getString("name"));
-					tmp.setCod(json_data.getString("cod"));
+					tmp.setCod(json_data.getInt("cod"));
 					tmp.setAddress(json_data.getString("address"));
 					tmp.setDescription(json_data.getString("description"));
 					tmp.setTelephone(json_data.getString("telephone"));
@@ -371,7 +371,7 @@ public class ServiceDAO {
 					Service tmp = new Service();
 
 					tmp.setName(json_data.getString("name"));
-					tmp.setCod(json_data.getString("cod"));
+					tmp.setCod(json_data.getInt("cod"));
 					tmp.setAddress(json_data.getString("address"));
 					tmp.setDescription(json_data.getString("description"));
 					tmp.setTelephone(json_data.getString("telephone"));

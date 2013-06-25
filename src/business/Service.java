@@ -9,7 +9,7 @@ public class Service{
 	
 	private String name;
 	private String address;
-	private String cod;
+	private int cod;
 	private String Description;
 	private String telephone;
 	private String category;
@@ -62,12 +62,12 @@ public class Service{
 	}
 
 
-	public String getCod() {
+	public int getCod() {
 		return cod;
 	}
 
 
-	public void setCod(String cod) {
+	public void setCod(int cod) {
 		this.cod = cod;
 	}
 

@@ -69,7 +69,7 @@
                 android:value="com.example.meetservice2.SearchResultActivity" />
         </activity>
         <activity
-            android:name="com.example.meetservice2.RecomendacionCalificacionActivity"
+            android:name="meetservice.RecomendacionCalificacionActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_recomendacion_calificacion"
             android:theme="@style/FullscreenTheme" >
@@ -85,6 +85,10 @@
         <activity
             android:name="meetservice.ServiceOption"
             android:label="@string/title_activity_service_option" >
+        </activity>
+        <activity
+            android:name="meetservice.TakeServiceActivity"
+            android:label="@string/title_activity_take_service" >
         </activity>
     </application>
 

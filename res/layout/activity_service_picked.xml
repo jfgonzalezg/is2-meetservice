@@ -11,8 +11,9 @@
     tools:context=".ServicePickedActivity" >
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -25,16 +26,17 @@
                 android:orientation="vertical" >
 
                 <QuickContactBadge
-                    android:id="@+id/quickContactBadge1"
+                    android:id="@+id/quickContactBadgeServicePickedimage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="30px" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar1"
+                    android:id="@+id/ratingBarServicePickedrating1"
                     style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:numStars="5"
                     android:stepSize="10" />
@@ -48,31 +50,18 @@
                 android:orientation="vertical" >
 
                 <TextView
-                    android:id="@+id/textView1names"
+                    android:id="@+id/textView1ServicePickednames"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Large Text"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <TextView
-                    android:id="@+id/textViewServiceDescription"
-                    android:layout_width="match_parent"
+                    android:id="@+id/textViewServicePickedDescription"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.41"
                     android:text="Description" />
-
-                <TextView
-                    android:id="@+id/textViewMainreg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Horario" />
-
-                <TextView
-                    android:id="@+id/textViewRegUserEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.22"
-                    android:text="(time)" />
 
             </LinearLayout>
 
@@ -93,11 +82,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pedir Servicio" />
-
-    <Button
-        android:id="@+id/buttonqualifyservice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calificar Servicio" />
 
 </LinearLayout>

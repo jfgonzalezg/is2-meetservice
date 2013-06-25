@@ -54,5 +54,6 @@
     <string name="title_activity_admin_service">AdminService</string>
     <string name="title_activity_last_list_service">LastListServiceActivity</string>
     <string name="title_activity_service_option">ServiceOption</string>
+    <string name="title_activity_take_service">TakeServiceActivity</string>
 
 </resources>

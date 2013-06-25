@@ -18,43 +18,38 @@ import conexion.RemoteConexion;
 
 public class UserServiceDAO {
 	private HttpPostAux post;
-	private UserService uservice;
+
 	private ArrayList<UserService> uservices;
-	
-	private ArrayList<Service> services; 
+
+	private ArrayList<Service> services;
 
 	public UserServiceDAO() {
 	}
-	
-	public int insertUserService(UserService userv){
-		
-		
+
+	public int insertUserService(int servicecode) {
+
 		int respond = 0;
 		String type = "INSERT";
-		
-		String username = UserGlobal.usersession.getUser();  //assigning proprietary of service
 
 		Date dactual = new Date();
-		java.text.DateFormat dformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
-		
+		java.text.DateFormat dformat = new SimpleDateFormat(
+				"yyyy-MM-dd HH:mm:ss");
+
 		String datenow = dformat.format(dactual);
-		
-		
 
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
-		
-		
-		poststring.add(new BasicNameValuePair("acepted", userv.getAcepted()+""));
-		poststring.add(new BasicNameValuePair("servicecode", userv.getServicecode()+""));
+
+		poststring.add(new BasicNameValuePair("servicecode", servicecode + ""));
 		poststring.add(new BasicNameValuePair("date", datenow));
-		poststring.add(new BasicNameValuePair("user", username));
+		poststring.add(new BasicNameValuePair("user", UserGlobal.usersession
+				.getUser()));
 		poststring.add(new BasicNameValuePair("type", type));
-		poststring.add(new BasicNameValuePair("password", UserGlobal.usersession.getPassword()));
+		poststring.add(new BasicNameValuePair("password",
+				UserGlobal.usersession.getPassword()));
 
 		JSONArray jdata = post.getServerData(poststring,
-				RemoteConexion.CONNECT_REMOTE_URL + "adduserservice.php"); 
+				RemoteConexion.CONNECT_REMOTE_URL + "adduserservice.php");
 
 		if (jdata != null && jdata.length() > 0) {
 			JSONObject json_data;
@@ -71,37 +66,41 @@ public class UserServiceDAO {
 		} else {
 			return 0;
 		}
-		
+
 	}
-	
-	
-public int updateUserService(UserService uservicee ){
-		
+
+	public int updateUserService(UserService uservicee) {
+
 		int respond = 0;
 		String type = "UPDATE";
-		
-		String username = UserGlobal.usersession.getUser();  //assigning proprietary of service
+
+		String username = UserGlobal.usersession.getUser(); // assigning
+															// proprietary of
+															// service
 
 		Date date = new Date();
-		java.text.DateFormat dformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
-		
+		java.text.DateFormat dformat = new SimpleDateFormat(
+				"yyyy-MM-dd HH:mm:ss");
+
 		String dateend = dformat.format(date);
-		
-		
 
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
-		
-		poststring.add(new BasicNameValuePair("cod", uservicee.getCod()+""));
-		poststring.add(new BasicNameValuePair("acepted", uservicee.getAcepted()+""));
-		poststring.add(new BasicNameValuePair("servicecode", uservicee.getServicecode()+""));
+
+		poststring.add(new BasicNameValuePair("cod", uservicee.getCod() + ""));
+		poststring.add(new BasicNameValuePair("acepted", uservicee.getAcepted()
+				+ ""));
+		poststring.add(new BasicNameValuePair("servicecode", uservicee
+				.getServicecode() + ""));
 		poststring.add(new BasicNameValuePair("date", dateend));
-		poststring.add(new BasicNameValuePair("closed", uservicee.getClosed()+""));
-		poststring.add(new BasicNameValuePair("qualified", uservicee.getQualified()+""));
+		poststring.add(new BasicNameValuePair("closed", uservicee.getClosed()
+				+ ""));
+		poststring.add(new BasicNameValuePair("qualified", uservicee
+				.getQualified() + ""));
 		poststring.add(new BasicNameValuePair("user", username));
 		poststring.add(new BasicNameValuePair("type", type));
-		poststring.add(new BasicNameValuePair("password", UserGlobal.usersession.getPassword()));
+		poststring.add(new BasicNameValuePair("password",
+				UserGlobal.usersession.getPassword()));
 
 		JSONArray jdata = post.getServerData(poststring,
 				RemoteConexion.CONNECT_REMOTE_URL + "adduserservice.php"); //
@@ -121,24 +120,21 @@ public int updateUserService(UserService uservicee ){
 		} else {
 			return 0;
 		}
-		
-	}
-	
-	
-	public ArrayList<UserService> queryUserServicesByUser(String username) {
 
+	}
+
+	public ArrayList<UserService> queryUserServicesByUser(String username) {
 
 		uservices = new ArrayList<UserService>();
 
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
 
-
 		poststring.add(new BasicNameValuePair("attrib", username));
 		poststring.add(new BasicNameValuePair("query", "USBYUSER"));
 
 		JSONArray jdata = post.getServerData(poststring,
-				RemoteConexion.CONNECT_REMOTE_URL + "queryuserservice.php");//
+				RemoteConexion.CONNECT_REMOTE_URL + "queryuserservice.php");
 
 		if (jdata != null && jdata.length() > 0) {
 			JSONObject json_data;
@@ -171,22 +167,19 @@ public int updateUserService(UserService uservicee ){
 		}
 
 	}
-	
-	
-	public ArrayList<Service> queryServicesGotByUser(String username) {
 
+	public ArrayList<Service> queryServicesGotByUser(String username) {
 
 		services = new ArrayList<Service>();
 
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
 
-
 		poststring.add(new BasicNameValuePair("attrib", username));
 		poststring.add(new BasicNameValuePair("query", "SBYUSER"));
 
 		JSONArray jdata = post.getServerData(poststring,
-				RemoteConexion.CONNECT_REMOTE_URL + "queryuserservice.php");//
+				RemoteConexion.CONNECT_REMOTE_URL + "queryuserservice.php");
 
 		if (jdata != null && jdata.length() > 0) {
 			JSONObject json_data;
@@ -195,11 +188,10 @@ public int updateUserService(UserService uservicee ){
 				for (int i = 0; i < jdata.length(); i++) {
 					json_data = jdata.getJSONObject(i);
 					Service tmp = new Service();
-					String time;
-
+					
 
 					tmp.setName(json_data.getString("name"));
-					tmp.setCod(json_data.getString("cod"));
+					tmp.setCod(json_data.getInt("cod"));
 					tmp.setAddress(json_data.getString("address"));
 					tmp.setDescription(json_data.getString("description"));
 					tmp.setTelephone(json_data.getString("telephone"));
@@ -213,9 +205,6 @@ public int updateUserService(UserService uservicee ){
 					tmp.setRating_acum(json_data.getInt("rating_acum"));
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
-
-
-					
 
 					services.add(tmp);
 				}
@@ -232,5 +221,4 @@ public int updateUserService(UserService uservicee ){
 
 	}
 
-	
 }
