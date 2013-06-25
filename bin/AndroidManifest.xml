@@ -90,6 +90,10 @@
             android:name="meetservice.TakeServiceActivity"
             android:label="@string/title_activity_take_service" >
         </activity>
+        <activity
+            android:name="meetservice.InboxActivity"
+            android:label="@string/title_activity_inbox" >
+        </activity>
     </application>
 
 </manifest>

@@ -26,11 +26,11 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textView1ServiceOptionservice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="TextView" />
+            android:text=" " />
 
         <TextView
             android:id="@+id/textView1ServiceOptionsblank"

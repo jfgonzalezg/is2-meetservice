@@ -33,7 +33,7 @@ public class CurrentServicesActivity extends Activity {
 	
 	private ListView listview;
 	private String[] opciones/* ={"hola","fuuuu"} */;
-	private UserServiceDAO servdao;
+	private UserServiceDAO uservdao;
 	private ArrayList<Service> servicess;
 	private ProgressDialog pDialog;
 	
@@ -42,6 +42,8 @@ public class CurrentServicesActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_current_services);
+		
+		new AsyncLoadOptions(this).execute("?");
 	}
 
 	@Override
@@ -63,7 +65,7 @@ public class CurrentServicesActivity extends Activity {
 
 		protected void onPreExecute() {
 
-			servdao = new UserServiceDAO();
+			uservdao = new UserServiceDAO();
 			servicess = new ArrayList<Service>();
 			listview = (ListView) findViewById(R.id.listCurrentServiceslist);
 			
@@ -78,7 +80,7 @@ public class CurrentServicesActivity extends Activity {
 
 		@Override
 		protected String doInBackground(String... params) {
-			servicess = servdao.queryServicesGotByUser(UserGlobal.usersession.getUser());
+			servicess = uservdao.queryServicesGotByUser(UserGlobal.usersession.getUser());
 
 			return "ok";
 		}
@@ -116,7 +118,7 @@ public class CurrentServicesActivity extends Activity {
 								Intent intent = new Intent(CurrentServicesActivity.this,
 										ServiceOption.class);
 								startActivity(intent);
-
+								break;
 							}
 
 						}
