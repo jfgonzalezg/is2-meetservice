@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|fill_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TakeServiceActivity" >
+
+    <TextView
+        android:id="@+id/textViewTakeServicetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView02blank"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2TakeServicedescript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/TextView01blank"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewTakeServicemesj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="En este momento se dispone a pedir el servicio descrito, a continuación tendrá que esperar a que la solicitud sea aceptada, luego de esto ud podrá consultar y ponerse en contacto con el responsable del servicio para satisfacer sus necesidades."
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView1TakeServiceMessageconf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="  Está seguro que quiere tomar este servicio?"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1TakeServiceSpace"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <Button
+            android:id="@+id/button1TakeServiceConfirmSI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginRight="80dp"
+            android:text="SI" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="24dp" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button1TakeServiceconfirmNO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="clip_horizontal|right"
+            android:text="NO" />
+    </LinearLayout>
+
+</LinearLayout>
