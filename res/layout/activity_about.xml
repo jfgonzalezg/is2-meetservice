@@ -14,27 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:text="
-        Our development team has had the
-        intention to create MEETSERVICE,
-        developing this online
-        application is intended to provide
-        users with an assist in the
-        interaction between natural and
-        legal persons in order that the
-        former may have a comprehensive
-        database on the options you have
-        to hire a service for your home
-        (eg electricians, plumbers,
-        architects, etc.), and
-        accordingly can choose the most
-        convenient, while users &apos;
-        customers&apos; may give a rating
-        to the users &apos;contractor&apos;
-        a rating according to some
-        criteria established by us and
-        will serve as a basis for other
-        client users can access these
-        services at the time of the search. " />
+        android:gravity="fill"
+        android:text="Nuestro equipo de desarrollo ha tenido la intención de crear MEETSERVICE, el desarrollo de esta aplicación en línea está diseñado para proporcionar a los usuarios una asistencia en la interacción entre las personas físicas y jurídicas con el fin de que el primero puede tener una base de datos completa sobre las opciones que tiene para contratar un servicio de para su hogar (por ejemplo, electricistas,fontaneros, arquitectos, etc), y por lo tanto se puede elegir el más conveniente, mientras que los clientes pueden dar una clasificación al contratista de acuerdo a unos criterios establecidos por nosotros y servirán de base para otros usuarios puedan acceder a estos servicios en el momento de la búsqueda." />
 
 </RelativeLayout>

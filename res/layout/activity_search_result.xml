@@ -10,39 +10,66 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SearchResultActivity" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        
+        android:gravity="right"
         android:orientation="vertical" >
 
         <TextView
             android:id="@+id/textViewSearchResultOrder"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:gravity="center_vertical"
-            android:text="ORDER BY"
+            android:text="ORDENAR POR:"
             android:textSize="20dp" />
 
         <Spinner
             android:id="@+id/spinnerSearchResultqualify"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textViewSearchResultOrder" />
 
         <Spinner
             android:id="@+id/spinnerSearchResultavailability"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/spinnerSearchResultqualify"
+            android:gravity="right" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textQualify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/spinnerSearchResultqualify"
+            android:layout_marginTop="18dp"
+            android:text="Calificacion:" />
+
+        <TextView
+            android:id="@+id/textOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/spinnerSearchResultavailability"
+            android:layout_marginTop="14dp"
+            android:layout_toLeftOf="@+id/spinnerSearchResultavailability"
+            android:text="N° de Veces Obtenido:" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textViewSearchResultBord"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_gravity="center_vertical"
-        android:gravity="center_vertical"
-        android:text="SERVICES SEARCH RESULT"
+        android:gravity="center|center_vertical"
+        android:text="RESULTADOS DE LA BUSQUEDA DE SERVICIOS"
         android:textSize="20dp" />
 
     <ScrollView
@@ -60,7 +87,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="602dp" >
             </ListView>
-
         </LinearLayout>
     </ScrollView>
 

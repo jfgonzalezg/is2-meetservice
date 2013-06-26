@@ -1,316 +1,281 @@
-<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
+    android:id="@+id/LinearLayout1"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="meetservice.ScoreServiceActivity" >
-    
+
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/TittleQualify"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/calificar_servicio"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout1"
-        android:layout_alignLeft="@+id/linearLayout2"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_marginTop="16dp" >
-
-        <TextView
-            android:id="@+id/Puntualidad"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="@string/puntualidad" />
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" >
 
-        <RadioGroup
-            android:id="@+id/rbPunt"
+            <TextView
+                android:id="@+id/TittleQualify"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/calificar_servicio"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/Puntualidad"
-            android:orientation="horizontal" >
+            android:layout_marginTop="16dp"
+            android:orientation="vertical" >
 
-            <RadioButton
-                android:id="@+id/P1"
+            <TextView
+                android:id="@+id/Puntualidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/uno" />
+                android:text="@string/puntualidad" />
 
-            <RadioButton
-                android:id="@+id/P2"
+            <RadioGroup
+                android:id="@+id/rbPunt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dos" />
+                android:orientation="horizontal" >
 
-            <RadioButton
-                android:id="@+id/P3"
+                <RadioButton
+                    android:id="@+id/P1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/uno" />
+
+                <RadioButton
+                    android:id="@+id/P2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dos" />
+
+                <RadioButton
+                    android:id="@+id/P3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tres" />
+
+                <RadioButton
+                    android:id="@+id/P4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatro" />
+
+                <RadioButton
+                    android:id="@+id/P5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cinco" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Calidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tres" />
+                android:text="@string/calidad" />
 
-            <RadioButton
-                android:id="@+id/P4"
+            <RadioGroup
+                android:id="@+id/rbCal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cuatro" />
+                android:orientation="horizontal" >
 
-            <RadioButton
-                android:id="@+id/P5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cinco" />
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/C1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/uno" />
 
-        <RadioGroup
-            android:id="@+id/rbCal"
+                <RadioButton
+                    android:id="@+id/C2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dos" />
+
+                <RadioButton
+                    android:id="@+id/C3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tres" />
+
+                <RadioButton
+                    android:id="@+id/C4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatro" />
+
+                <RadioButton
+                    android:id="@+id/C5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cinco" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Calidad"
-            android:orientation="horizontal" >
+            android:orientation="vertical" >
 
-            <RadioButton
-                android:id="@+id/C1"
+            <TextView
+                android:id="@+id/Atencion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/uno" />
+                android:text="@string/atencion" />
 
-            <RadioButton
-                android:id="@+id/C2"
+            <RadioGroup
+                android:id="@+id/rbAten"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dos" />
+                android:orientation="horizontal" >
 
-            <RadioButton
-                android:id="@+id/C3"
+                <RadioButton
+                    android:id="@+id/A1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/uno" />
+
+                <RadioButton
+                    android:id="@+id/A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dos" />
+
+                <RadioButton
+                    android:id="@+id/A3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tres" />
+
+                <RadioButton
+                    android:id="@+id/A4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatro" />
+
+                <RadioButton
+                    android:id="@+id/A5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cinco" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Cumplimiento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tres" />
+                android:text="@string/cumplimiento" />
 
-            <RadioButton
-                android:id="@+id/C4"
+            <RadioGroup
+                android:id="@+id/rbCum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cuatro" />
+                android:orientation="horizontal" >
 
-            <RadioButton
-                android:id="@+id/C5"
+                <RadioButton
+                    android:id="@+id/Cu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/uno" />
+
+                <RadioButton
+                    android:id="@+id/Cu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dos" />
+
+                <RadioButton
+                    android:id="@+id/Cu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tres" />
+
+                <RadioButton
+                    android:id="@+id/Cu4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatro" />
+
+                <RadioButton
+                    android:id="@+id/Cu5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cinco" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Costo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cinco" />
-        </RadioGroup>
+                android:text="@string/costo" />
 
-        <TextView
-            android:id="@+id/Calidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/rbPunt"
-            android:text="@string/calidad" />
+            <RadioGroup
+                android:id="@+id/rbCos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
 
-    </RelativeLayout>
+                <RadioButton
+                    android:id="@+id/Co1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/uno" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp" >
+                <RadioButton
+                    android:id="@+id/Co2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dos" />
 
-        <TextView
-            android:id="@+id/Comment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="@string/comentarios" />
+                <RadioButton
+                    android:id="@+id/Co3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tres" />
 
-        <EditText
-            android:id="@+id/comment1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/Comment"
-            android:ems="10"
-            android:inputType="textMultiLine" >
+                <RadioButton
+                    android:id="@+id/Co4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatro" />
 
-            <requestFocus />
-        </EditText>
+                <RadioButton
+                    android:id="@+id/Co5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cinco" />
+            </RadioGroup>
+        </LinearLayout>
 
         <Button
             android:id="@+id/Sendbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/comment1"
-            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="17dp"
             android:text="@string/send" />
-    </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/relativeLayout2"
-        android:layout_centerVertical="true"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/Atencion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/atencion" />
-
-        <RadioGroup
-            android:id="@+id/rbAten"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <RadioButton
-                android:id="@+id/A1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/uno" />
-
-            <RadioButton
-                android:id="@+id/A2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dos" />
-
-            <RadioButton
-                android:id="@+id/A3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tres" />
-
-            <RadioButton
-                android:id="@+id/A4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cuatro" />
-
-            <RadioButton
-                android:id="@+id/A5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cinco" />
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/Cumplimiento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cumplimiento" />
-
-        <RadioGroup
-            android:id="@+id/rbCum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <RadioButton
-                android:id="@+id/Cu1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/uno" />
-
-            <RadioButton
-                android:id="@+id/Cu2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dos" />
-
-            <RadioButton
-                android:id="@+id/Cu3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tres" />
-
-            <RadioButton
-                android:id="@+id/Cu4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cuatro" />
-
-            <RadioButton
-                android:id="@+id/Cu5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cinco" />
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/Costo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/costo" />
-
-        <RadioGroup
-            android:id="@+id/rbCos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <RadioButton
-                android:id="@+id/Co1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/uno" />
-
-            <RadioButton
-                android:id="@+id/Co2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dos" />
-
-            <RadioButton
-                android:id="@+id/Co3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tres" />
-
-            <RadioButton
-                android:id="@+id/Co4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cuatro" />
-
-            <RadioButton
-                android:id="@+id/Co5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cinco" />
-        </RadioGroup>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

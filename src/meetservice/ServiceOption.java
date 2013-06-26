@@ -57,7 +57,11 @@ public class ServiceOption extends Activity {
 
 			@Override
 			public void onClick(View v) {
-
+				Intent intent = new Intent(ServiceOption.this,
+						ScoreServiceActivity.class);
+				intent.putExtra("servicecode", servicecode);
+				intent.putExtra("userservicecod", userservicecod);
+				startActivity(intent);
 			}
 		});
 

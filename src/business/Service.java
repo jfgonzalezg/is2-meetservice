@@ -17,6 +17,64 @@ public class Service{
 	private String webpage;
 	private String email;
 	private String username;
+	private int calpuntualidad;
+	private int calcosto;
+	private int calatencion;
+	private int calculminacion;
+	private int calcalidad;
+	
+	
+	
+	public int getCalpuntualidad() {
+		return calpuntualidad;
+	}
+
+
+	public void setCalpuntualidad(int calpuntualidad) {
+		this.calpuntualidad = calpuntualidad;
+	}
+
+
+	public int getCalcosto() {
+		return calcosto;
+	}
+
+
+	public void setCalcosto(int calcosto) {
+		this.calcosto = calcosto;
+	}
+
+
+	public int getCalatencion() {
+		return calatencion;
+	}
+
+
+	public void setCalatencion(int calatencion) {
+		this.calatencion = calatencion;
+	}
+
+
+	public int getCalculminacion() {
+		return calculminacion;
+	}
+
+
+	public void setCalculminacion(int calculminacion) {
+		this.calculminacion = calculminacion;
+	}
+
+
+	public int getCalcalidad() {
+		return calcalidad;
+	}
+
+
+	public void setCalcalidad(int calcalidad) {
+		this.calcalidad = calcalidad;
+	}
+
+
 	public String getUsername() {
 		return username;
 	}

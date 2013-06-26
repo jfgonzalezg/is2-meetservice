@@ -19,8 +19,7 @@ public class ServicePickedActivity extends Activity {
 	private Service servicepicked;
 	private Button bViewStatistics, bTakeService;
 	private TextView tvServiceName, tvServiceDescription;
-	private RatingBar ratingbar;
-	
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,31 +31,21 @@ public class ServicePickedActivity extends Activity {
 		bTakeService = (Button) findViewById(R.id.buttontakeservice);
 		tvServiceName = (TextView) findViewById(R.id.textView1ServicePickednames);
 		tvServiceDescription = (TextView) findViewById(R.id.textViewServicePickedDescription);
-		ratingbar = (RatingBar) findViewById(R.id.ratingBarServicePickedrating1);
-		
 		
 
 		tvServiceDescription.setText(UserGlobal.serviceactual.getDescription());
 		tvServiceName.setText(UserGlobal.serviceactual.getName());
-		
-		ratingbar.setStepSize((float) 0.5);
-		ratingbar.setMax(5);
 
-		if (UserGlobal.serviceactual.getNum_rating() > 0) {
-			ratingbar.setRating(UserGlobal.serviceactual.getRating_acum()
-					/ UserGlobal.serviceactual.getNum_rating());
-		} else {
-			ratingbar.setRating(0);
-		}
+		
 
 		bViewStatistics.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				/*
-				 * Intent intent = new
-				 * Intent(ServicePickedActivity.this,ViewStatisticsActivity
-				 * .class); startActivity(intent);
-				 */
+
+				Intent intent = new Intent(ServicePickedActivity.this,
+						StatisticsServiceActivity.class);
+				startActivity(intent);
+
 			}
 		});
 
@@ -64,12 +53,11 @@ public class ServicePickedActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				
-				
-				 Intent intent = new
-				 Intent(ServicePickedActivity.this,TakeServiceActivity.class);
-				 startActivity(intent);
-				 
+
+				Intent intent = new Intent(ServicePickedActivity.this,
+						TakeServiceActivity.class);
+				startActivity(intent);
+
 			}
 		});
 

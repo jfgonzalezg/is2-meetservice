@@ -36,7 +36,7 @@
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Name" />
+                    android:text="Nombre" />
 
                 <EditText
                     android:id="@+id/EditTextNEWSERVICEOFFERname"
@@ -53,14 +53,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextViewNEWSERVICEOFFERcity"
+                    android:id="@+id/TextViewNEWSERVICEOFFERcate"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/city" />
+                    android:text="Categoria" />
 
                 <Spinner
-                    android:id="@+id/spinnerNewServiceOffercity"
+                    android:id="@+id/spinnerNewServiceOffercate"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
@@ -72,14 +72,14 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextViewNEWSERVICEOFFERcate"
+                    android:id="@+id/TextViewNEWSERVICEOFFERcity"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Category" />
+                    android:text="@string/city" />
 
                 <Spinner
-                    android:id="@+id/spinnerNewServiceOffercate"
+                    android:id="@+id/spinnerNewServiceOffercity"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
@@ -206,6 +206,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Send" />
+        android:text="Enviar" />
 
 </LinearLayout>

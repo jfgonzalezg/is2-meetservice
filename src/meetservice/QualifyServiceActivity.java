@@ -25,30 +25,12 @@ public class QualifyServiceActivity extends Activity implements android.widget.R
 	
 	private Button sendCalification;
 	private RadioGroup rgPuntualidad, rgCalidad, rgAtencion, rgCulminacion, rgCosto;
-	private EditText comment;
-	private String comm;
+
+
 	int punt, aten, cal, culm, cos;
 			
 	private ProgressDialog pDialog;
-	//private Calification score;
-	//private CalificationDAO scoredao;
-    /** Called when the activity is first created. */
-   /* @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calificacion);
-        
-        sendCalification = (Button) findViewById(R.id.Sendbutton) ;
-        
-        sendCalification.setOnClickListener(new OnClickListener(){
-        	
-        	@Override
-        	public void onClick(View v){
-        		
-        		registerNew(v);
-        	}
-        });
-    }*/
+	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		//setContentView(R.layout.activity_qualify_service);
@@ -57,7 +39,7 @@ public class QualifyServiceActivity extends Activity implements android.widget.R
 		rgAtencion = (RadioGroup)findViewById(R.id.rbAten);
 		rgCulminacion = (RadioGroup)findViewById(R.id.rbCum);
 		rgCosto = (RadioGroup)findViewById(R.id.rbCos);
-		comment = (EditText) findViewById(R.id.comment1);
+
 		sendCalification = (Button)findViewById(R.id.Sendbutton);
 		
 		rgPuntualidad.setOnCheckedChangeListener(this);
@@ -66,7 +48,7 @@ public class QualifyServiceActivity extends Activity implements android.widget.R
 		rgCulminacion.setOnCheckedChangeListener(this);
 		rgCosto.setOnCheckedChangeListener(this);
 		
-		comm = comment.getText().toString();
+
 		
 		//score.setComment(comm);
 		

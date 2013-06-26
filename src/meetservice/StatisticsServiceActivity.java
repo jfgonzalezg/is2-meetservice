@@ -1,12 +1,21 @@
 package meetservice;
 
+import session.UserGlobal;
 import business.Score;
+import business.Service;
 import business.Statistics;
 import dao.ScoreDAO;
+import dao.ServiceDAO;
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.meetservice2.R;
 
 
@@ -14,28 +23,37 @@ import com.example.meetservice2.R;
 public class StatisticsServiceActivity extends Activity {
 	
 	
-	private ScoreDAO scoredao;
-	private Score score;
-	private Statistics statistics;
+	private ServiceDAO servicedao;
+	private business.Service service;
+	
+	private TextView calidad;
+	private TextView costo;
+	private TextView puntualidad;
+	private TextView culminacion;
+	private TextView atencion;
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_service_statistics);
 		
-		LinearLayout statistic = (LinearLayout) findViewById(R.id.Statistics);
+		calidad = (TextView) findViewById(R.id.TextViewStatcal);
+		costo = (TextView) findViewById(R.id.TextViewStatcosto);
+		puntualidad = (TextView) findViewById(R.id.TextViewStatpuntua);
+		culminacion = (TextView) findViewById(R.id.TextViewStatculm);
+		atencion = (TextView) findViewById(R.id.textViewStatatencion);
 		
-	/*	statistic.addView(tchart);
+		service = UserGlobal.serviceactual;
 		
-		Series bar = new Bar(tchart.getChart());
-		tchart.getAxes().getBottom().setIncrement(1);
-		bar.add(123,"Puntualidad",Color.green);
-		bar.add(456,"Calidad",Color.blue);
-		bar.add(789,"Atencion",Color.yellow);
-		bar.add(101112,"Cumplimiento",Color.red);
-		bar.add(131415,"Costo",Color.orange);*/
-		
+		calidad.setText(" "+(service.getCalcalidad()/service.getNum_rating()));
+		costo.setText(" "+(service.getCalcalidad()/service.getNum_rating()));
+		puntualidad.setText(" "+(service.getCalcalidad()/service.getNum_rating()));
+		culminacion.setText(" "+(service.getCalcalidad()/service.getNum_rating()));
+		atencion.setText(" "+(service.getCalcalidad()/service.getNum_rating()));
 	}
+	
+	
 	
 }

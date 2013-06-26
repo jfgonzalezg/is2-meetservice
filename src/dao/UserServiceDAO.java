@@ -188,7 +188,6 @@ public class UserServiceDAO {
 				for (int i = 0; i < jdata.length(); i++) {
 					json_data = jdata.getJSONObject(i);
 					Service tmp = new Service();
-					
 
 					tmp.setName(json_data.getString("name"));
 					tmp.setCod(json_data.getInt("cod"));
@@ -205,7 +204,13 @@ public class UserServiceDAO {
 					tmp.setRating_acum(json_data.getInt("rating_acum"));
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
+					tmp.setUsername(json_data.getString("username"));
 
+					tmp.setCalatencion(json_data.getInt("calatencion"));
+					tmp.setCalcalidad(json_data.getInt("calcalidad"));
+					tmp.setCalcosto(json_data.getInt("calcosto"));
+					tmp.setCalculminacion(json_data.getInt("calculminacion"));
+					tmp.setCalpuntualidad(json_data.getInt("calpuntualidad"));
 					services.add(tmp);
 				}
 
@@ -220,8 +225,7 @@ public class UserServiceDAO {
 		}
 
 	}
-	
-	
+
 	public ArrayList<UserService> queryUserServicesByCodSer(int servicecode) {
 
 		uservices = new ArrayList<UserService>();
@@ -229,7 +233,7 @@ public class UserServiceDAO {
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
 
-		poststring.add(new BasicNameValuePair("attrib", servicecode+""));
+		poststring.add(new BasicNameValuePair("attrib", servicecode + ""));
 		poststring.add(new BasicNameValuePair("query", "USBYCODSER"));
 
 		JSONArray jdata = post.getServerData(poststring,
@@ -274,7 +278,7 @@ public class UserServiceDAO {
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
 		post = new HttpPostAux();
 
-		poststring.add(new BasicNameValuePair("attrib", servicecode+""));
+		poststring.add(new BasicNameValuePair("attrib", servicecode + ""));
 		poststring.add(new BasicNameValuePair("query", "SBYCODSER"));
 
 		JSONArray jdata = post.getServerData(poststring,
@@ -287,7 +291,6 @@ public class UserServiceDAO {
 				for (int i = 0; i < jdata.length(); i++) {
 					json_data = jdata.getJSONObject(i);
 					Service tmp = new Service();
-					
 
 					tmp.setName(json_data.getString("name"));
 					tmp.setCod(json_data.getInt("cod"));
@@ -304,6 +307,13 @@ public class UserServiceDAO {
 					tmp.setRating_acum(json_data.getInt("rating_acum"));
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
+					tmp.setUsername(json_data.getString("username"));
+
+					tmp.setCalatencion(json_data.getInt("calatencion"));
+					tmp.setCalcalidad(json_data.getInt("calcalidad"));
+					tmp.setCalcosto(json_data.getInt("calcosto"));
+					tmp.setCalculminacion(json_data.getInt("calculminacion"));
+					tmp.setCalpuntualidad(json_data.getInt("calpuntualidad"));
 
 					services.add(tmp);
 				}
@@ -319,6 +329,5 @@ public class UserServiceDAO {
 		}
 
 	}
-	
 
 }

@@ -34,6 +34,8 @@ public class ServiceDAO {
 
 	public int insertService() {
 		respond = 0;
+		
+		
 
 		String name = service.getName();
 		String address = service.getAddress();
@@ -63,6 +65,8 @@ public class ServiceDAO {
 		poststring.add(new BasicNameValuePair("webpage", webpage));
 		poststring.add(new BasicNameValuePair("email", email));
 		poststring.add(new BasicNameValuePair("user", username));
+		
+		poststring.add(new BasicNameValuePair("type", "INSERT"));
 
 		JSONArray jdata = post.getServerData(poststring,
 				RemoteConexion.CONNECT_REMOTE_URL + "addservice.php");
@@ -84,6 +88,48 @@ public class ServiceDAO {
 		}
 	}
 
+	
+	public int updateService(Service serv) {
+		respond = 0;
+
+
+		
+
+		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+		post = new HttpPostAux();
+
+
+		poststring.add(new BasicNameValuePair("cod", serv.getCod()+""));
+		poststring.add(new BasicNameValuePair("numrating", serv.getNum_rating()+""));
+		poststring.add(new BasicNameValuePair("rating", serv.getRating_acum()+""));
+		poststring.add(new BasicNameValuePair("calpuntualidad", serv.getCalpuntualidad()+""));
+		poststring.add(new BasicNameValuePair("calcosto", serv.getCalcosto() + ""));
+		poststring.add(new BasicNameValuePair("calatencion", serv.getCalatencion()+""));
+		poststring.add(new BasicNameValuePair("calculminacion", serv.getCalculminacion()+""));
+		poststring.add(new BasicNameValuePair("calcalidad", serv.getCalcalidad()+""));
+		
+		poststring.add(new BasicNameValuePair("type", "UPDATE"));
+
+		JSONArray jdata = post.getServerData(poststring,
+				RemoteConexion.CONNECT_REMOTE_URL + "addservice.php");
+
+		if (jdata != null && jdata.length() > 0) {
+			JSONObject json_data;
+			try {
+				json_data = jdata.getJSONObject(0);
+				respond = json_data.getInt("respond");
+
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+
+			return respond;
+
+		} else {
+			return 0;
+		}
+	}
+	
 	/*public void deleteUser(String name, String user, String password) {
 
 		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
@@ -138,6 +184,13 @@ public class ServiceDAO {
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
 					tmp.setUsername(json_data.getString("username"));
+					
+					tmp.setCalatencion(json_data.getInt("calatencion"));
+					tmp.setCalcalidad(json_data.getInt("calcalidad"));
+					tmp.setCalcosto(json_data.getInt("calcosto"));
+					tmp.setCalculminacion(json_data.getInt("calculminacion"));
+					tmp.setCalpuntualidad(json_data.getInt("calpuntualidad"));
+					
 
 
 					services.add(tmp);
@@ -194,6 +247,12 @@ public class ServiceDAO {
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
 					tmp.setUsername(json_data.getString("username"));
+					
+					tmp.setCalatencion(json_data.getInt("calatencion"));
+					tmp.setCalcalidad(json_data.getInt("calcalidad"));
+					tmp.setCalcosto(json_data.getInt("calcosto"));
+					tmp.setCalculminacion(json_data.getInt("calculminacion"));
+					tmp.setCalpuntualidad(json_data.getInt("calpuntualidad"));
 
 					services.add(tmp);
 				}
@@ -248,6 +307,12 @@ public class ServiceDAO {
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
 					tmp.setUsername(json_data.getString("username"));
+					
+					tmp.setCalatencion(json_data.getInt("calatencion"));
+					tmp.setCalcalidad(json_data.getInt("calcalidad"));
+					tmp.setCalcosto(json_data.getInt("calcosto"));
+					tmp.setCalculminacion(json_data.getInt("calculminacion"));
+					tmp.setCalpuntualidad(json_data.getInt("calpuntualidad"));
 
 					services.add(tmp);
 				}
@@ -317,6 +382,12 @@ public class ServiceDAO {
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
 					tmp.setUsername(json_data.getString("username"));
+					
+					tmp.setCalatencion(json_data.getInt("calatencion"));
+					tmp.setCalcalidad(json_data.getInt("calcalidad"));
+					tmp.setCalcosto(json_data.getInt("calcosto"));
+					tmp.setCalculminacion(json_data.getInt("calculminacion"));
+					tmp.setCalpuntualidad(json_data.getInt("calpuntualidad"));
 
 					services.add(tmp);
 				}
@@ -386,6 +457,12 @@ public class ServiceDAO {
 					tmp.setAdmin_state(json_data.getString("admin_state"));
 					tmp.setEmail(json_data.getString("email"));
 					tmp.setUsername(json_data.getString("username"));
+					
+					tmp.setCalatencion(json_data.getInt("calatencion"));
+					tmp.setCalcalidad(json_data.getInt("calcalidad"));
+					tmp.setCalcosto(json_data.getInt("calcosto"));
+					tmp.setCalculminacion(json_data.getInt("calculminacion"));
+					tmp.setCalpuntualidad(json_data.getInt("calpuntualidad"));
 
 					services.add(tmp);
 				}
