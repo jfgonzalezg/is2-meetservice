@@ -11,26 +11,26 @@ import org.json.JSONObject;
 import conexion.RemoteConexion;
 
 import util.HttpPostAux;
-import business.Calification;
+import business.Score;
 import business.User;
 
-public class CalificationDAO {
+public class ScoreDAO {
 	
 	ServiceDAO servicedao;
-	Calification score;
+	Score score;
 	HttpPostAux post;
 	int respond;
 	
 	
-	public CalificationDAO(){
-		score = new Calification();
+	public ScoreDAO(){
+		score = new Score();
 	}
 	
-	public Calification getScore(){
+	public Score getScore(){
 		return score;
 	}
 	
-	public void setScore(Calification score){
+	public void setScore(Score score){
 		this.score = score;
 	}
 	
@@ -81,7 +81,7 @@ public class CalificationDAO {
 		}
 	}
 	
-	public Calification queryScore(String code, String user){
+	public Score queryScore(String code, String user){
 		String servicecode = code;
 		String username = user;
 		
@@ -101,7 +101,7 @@ public class CalificationDAO {
 			try {
 				for (int i = 0; i < jdata.length(); i++) {
 					json_data = jdata.getJSONObject(i);
-					Calification tmp = new Calification();
+					Score tmp = new Score();
 					
 					tmp.setPunctuality(Integer.parseInt(json_data.getString("punctuality")));
 					tmp.setAttention(Integer.parseInt(json_data.getString("attention")));

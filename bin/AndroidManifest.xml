@@ -94,6 +94,8 @@
             android:name="meetservice.InboxActivity"
             android:label="@string/title_activity_inbox" >
         </activity>
+        <activity android:name="meetservice.CurrentServiceSelectedActicity"></activity>
+        <activity android:name="meetservice.ScoreServiceActivity"></activity>
     </application>
 
 </manifest>

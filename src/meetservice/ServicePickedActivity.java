@@ -52,11 +52,10 @@ public class ServicePickedActivity extends Activity {
 		bViewStatistics.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				/*
-				 * Intent intent = new
-				 * Intent(ServicePickedActivity.this,ViewStatisticsActivity
-				 * .class); startActivity(intent);
-				 */
+				
+				Intent intent = new Intent(ServicePickedActivity.this,StatisticsServiceActivity.class); 
+				startActivity(intent);
+				
 			}
 		});
 

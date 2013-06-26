@@ -5,5 +5,7 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/John F/git/jfreechart-1.0.14.zip"/>
+	<classpathentry kind="lib" path="C:/Users/John F/git/TeeChart.Android.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

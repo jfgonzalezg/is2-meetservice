@@ -1,6 +1,6 @@
 package business;
 
-public class Calification {
+public class Score {
 	
 	private int punctuality;
 	private int quality;
@@ -9,7 +9,7 @@ public class Calification {
 	private int cost;
 	private String comment;
 	
-	public Calification(){
+	public Score(){
 		
 	}
 	

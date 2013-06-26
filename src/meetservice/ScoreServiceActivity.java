@@ -1,10 +1,10 @@
 package meetservice;
 
-import business.Calification;
+import business.Score;
 
 import com.example.meetservice2.R;
 
-import dao.CalificationDAO;
+import dao.ScoreDAO;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -21,7 +21,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class QualifyServiceActivity extends Activity implements android.widget.RadioGroup.OnCheckedChangeListener{
+public class ScoreServiceActivity extends Activity implements android.widget.RadioGroup.OnCheckedChangeListener{
 	
 	private Button sendCalification;
 	private RadioGroup rgPuntualidad, rgCalidad, rgAtencion, rgCulminacion, rgCosto;
@@ -30,8 +30,8 @@ public class QualifyServiceActivity extends Activity implements android.widget.R
 	int punt, aten, cal, culm, cos;
 			
 	private ProgressDialog pDialog;
-	private Calification score;
-	private CalificationDAO scoredao;
+	private Score score;
+	private ScoreDAO scoredao;
     /** Called when the activity is first created. */
    /* @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class QualifyServiceActivity extends Activity implements android.widget.R
     }*/
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_qualify_service);
+		setContentView(R.layout.activity_score_service);
 		rgPuntualidad = (RadioGroup)findViewById(R.id.rbPunt);
 		rgCalidad = (RadioGroup)findViewById(R.id.rbCal);
 		rgAtencion = (RadioGroup)findViewById(R.id.rbAten);
@@ -75,8 +75,8 @@ public class QualifyServiceActivity extends Activity implements android.widget.R
 	@Override
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
 		// TODO Auto-generated method stub
-		final Calification score = new Calification();
-		final CalificationDAO scoredao = new CalificationDAO();
+		final Score score = new Score();
+		final ScoreDAO scoredao = new ScoreDAO();
 		EditText edittext;
 		String txt;
 		
