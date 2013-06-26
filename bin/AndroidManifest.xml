@@ -96,6 +96,14 @@
         </activity>
         <activity android:name="meetservice.CurrentServiceSelectedActicity"></activity>
         <activity android:name="meetservice.ScoreServiceActivity"></activity>
+        
+        <activity
+            android:name="meetservice.ViewRequestServiceActivity"
+             >
+        </activity>
+        <activity
+            android:name="meetservice.RequestResponseActivity" >
+        </activity>
     </application>
 
 </manifest>

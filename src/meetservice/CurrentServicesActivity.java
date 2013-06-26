@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import session.UserGlobal;
 import business.Service;
+import business.UserService;
 
 import com.example.meetservice2.R;
 import com.example.meetservice2.R.layout;
@@ -36,6 +37,7 @@ public class CurrentServicesActivity extends Activity {
 	private UserServiceDAO uservdao;
 	private ArrayList<Service> servicess;
 	private ProgressDialog pDialog;
+	private ArrayList<UserService> userservicess;
 	
 	
 	@Override
@@ -67,6 +69,7 @@ public class CurrentServicesActivity extends Activity {
 
 			uservdao = new UserServiceDAO();
 			servicess = new ArrayList<Service>();
+			userservicess = new ArrayList<UserService>();
 			listview = (ListView) findViewById(R.id.listCurrentServiceslist);
 			
 
@@ -81,7 +84,9 @@ public class CurrentServicesActivity extends Activity {
 		@Override
 		protected String doInBackground(String... params) {
 			servicess = uservdao.queryServicesGotByUser(UserGlobal.usersession.getUser());
-
+			userservicess = uservdao.queryUserServicesByUser(UserGlobal.usersession.getUser());
+			
+			
 			return "ok";
 		}
 
@@ -117,6 +122,8 @@ public class CurrentServicesActivity extends Activity {
 								UserGlobal.serviceactual = service;
 								Intent intent = new Intent(CurrentServicesActivity.this,
 										ServiceOption.class);
+								intent.putExtra("servicecode", userservicess.get(position).getServicecode()+"");
+								intent.putExtra("userservicecod", userservicess.get(position).getCod()+"");
 								startActivity(intent);
 								break;
 							}

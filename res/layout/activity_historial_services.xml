@@ -1,41 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="meetservice.HistorialServiceActivity" >
+
+    <TextView
+        android:id="@+id/textViewTakeServicetitlen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Historial de Servicios Tomados"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ScrollView
         android:id="@+id/scrolHistoricalServices"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/relativeLayout1"
+        android:layout_height="389dp"
         android:layout_marginTop="16dp" >
 
         <ListView
             android:id="@+id/listHistoricalServices"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="428dp" >
         </ListView>
-               
     </ScrollView>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
-
-        <TextView
-            android:id="@+id/textViewTakeServicetitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="Historial de Servicios Tomados"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    </RelativeLayout>
-    
-</RelativeLayout>
+</LinearLayout>

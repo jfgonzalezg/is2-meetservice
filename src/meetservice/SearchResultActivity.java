@@ -222,22 +222,14 @@ public class SearchResultActivity extends Activity {
 					public void onItemClick(AdapterView<?> parent, View view,
 							int position, long id) {
 
-						for (Iterator<Service> iterator = servicess.iterator(); iterator
-								.hasNext();) {
-
-							Service service = (Service) iterator.next();
-
-							if (listitems[position].equals(service.getName())) {
-								// save on session service info
-								UserGlobal.serviceactual = service;
+							
+								UserGlobal.serviceactual = servicess.get(position);
 								Intent intent = new Intent(
 										SearchResultActivity.this,
 										ServicePickedActivity.class);
 								startActivity(intent);
 
-							}
-
-						}
+							
 
 					}
 

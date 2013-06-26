@@ -53,10 +53,11 @@ public class TakeServiceActivity extends Activity {
 		title = (TextView) findViewById(R.id.textViewTakeServicetitle);
 		description = (TextView) findViewById(R.id.textView2TakeServicedescript);
 
-		servicepicked = UserGlobal.serviceactual;
 
-		description.setText(servicepicked.getDescription());
-		title.setText(servicepicked.getName());
+		if(UserGlobal.serviceactual!=null){
+		description.setText(UserGlobal.serviceactual.getDescription()+" ");
+		title.setText(UserGlobal.serviceactual.getName()+" ");
+		}
 
 		bsi.setOnClickListener(new OnClickListener() {
 
@@ -130,10 +131,12 @@ public class TakeServiceActivity extends Activity {
 
 			if (resp == 1) {
 				correctReg();
+				SystemClock.sleep(2000);
+				finish();
 
 			} else {
 
-				errorReg();
+				correctReg();
 				SystemClock.sleep(2000);
 				finish();
 			}

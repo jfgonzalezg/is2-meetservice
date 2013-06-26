@@ -146,7 +146,7 @@ public class UserServiceDAO {
 
 					tmp.setCod(json_data.getInt("cod"));
 					tmp.setServicecode(json_data.getInt("servicecode"));
-					tmp.setUsername(json_data.getString("username"));
+					tmp.setUsername(json_data.getString("user"));
 					tmp.setClosed(json_data.getInt("closed"));
 					tmp.setQualified(json_data.getInt("qualified"));
 					tmp.setAcepted(json_data.getInt("acepted"));
@@ -220,5 +220,105 @@ public class UserServiceDAO {
 		}
 
 	}
+	
+	
+	public ArrayList<UserService> queryUserServicesByCodSer(int servicecode) {
+
+		uservices = new ArrayList<UserService>();
+
+		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+		post = new HttpPostAux();
+
+		poststring.add(new BasicNameValuePair("attrib", servicecode+""));
+		poststring.add(new BasicNameValuePair("query", "USBYCODSER"));
+
+		JSONArray jdata = post.getServerData(poststring,
+				RemoteConexion.CONNECT_REMOTE_URL + "queryuserservice.php");
+
+		if (jdata != null && jdata.length() > 0) {
+			JSONObject json_data;
+
+			try {
+				for (int i = 0; i < jdata.length(); i++) {
+					json_data = jdata.getJSONObject(i);
+					UserService tmp = new UserService();
+
+					tmp.setCod(json_data.getInt("cod"));
+					tmp.setServicecode(json_data.getInt("servicecode"));
+					tmp.setUsername(json_data.getString("user"));
+					tmp.setClosed(json_data.getInt("closed"));
+					tmp.setQualified(json_data.getInt("qualified"));
+					tmp.setAcepted(json_data.getInt("acepted"));
+					tmp.setDateini(json_data.getString("date_start"));
+					tmp.setDatefin(json_data.getString("date_end"));
+
+					uservices.add(tmp);
+				}
+
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+
+			return uservices;
+
+		} else {
+			return null;
+		}
+
+	}
+
+	public ArrayList<Service> queryServicesGotByCodSer(int servicecode) {
+
+		services = new ArrayList<Service>();
+
+		ArrayList<NameValuePair> poststring = new ArrayList<NameValuePair>();
+		post = new HttpPostAux();
+
+		poststring.add(new BasicNameValuePair("attrib", servicecode+""));
+		poststring.add(new BasicNameValuePair("query", "SBYCODSER"));
+
+		JSONArray jdata = post.getServerData(poststring,
+				RemoteConexion.CONNECT_REMOTE_URL + "queryuserservice.php");
+
+		if (jdata != null && jdata.length() > 0) {
+			JSONObject json_data;
+
+			try {
+				for (int i = 0; i < jdata.length(); i++) {
+					json_data = jdata.getJSONObject(i);
+					Service tmp = new Service();
+					
+
+					tmp.setName(json_data.getString("name"));
+					tmp.setCod(json_data.getInt("cod"));
+					tmp.setAddress(json_data.getString("address"));
+					tmp.setDescription(json_data.getString("description"));
+					tmp.setTelephone(json_data.getString("telephone"));
+					tmp.setCategory(json_data.getString("category"));
+					tmp.setCity(json_data.getString("city"));
+					// tmp.setDate_start(json_data.getDate("date_start"));
+					// tmp.setDate_end(date_end)
+					tmp.setWebpage(json_data.getString("webpage"));
+					tmp.setAvailability(json_data.getInt("availability"));
+					tmp.setNum_rating(json_data.getInt("num_rating"));
+					tmp.setRating_acum(json_data.getInt("rating_acum"));
+					tmp.setAdmin_state(json_data.getString("admin_state"));
+					tmp.setEmail(json_data.getString("email"));
+
+					services.add(tmp);
+				}
+
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+
+			return services;
+
+		} else {
+			return null;
+		}
+
+	}
+	
 
 }

@@ -115,8 +115,11 @@ public class OfferService extends Activity {
 
 							if (opciones[position].equals(service.getName())) {
 								UserGlobal.serviceactual = service;
-								Intent intent = new Intent(OfferService.this,
+								/*Intent intent = new Intent(OfferService.this,
 										ServiceSelectedActivity.class);
+								startActivity(intent);*/
+								Intent intent = new Intent(OfferService.this,
+										ViewRequestServiceActivity.class);
 								startActivity(intent);
 
 							}

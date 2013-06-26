@@ -28,7 +28,7 @@
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_gravity="center_horizontal"
         android:scrollbars="vertical" >
@@ -39,7 +39,7 @@
             android:orientation="vertical" >
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:orientation="vertical" >
@@ -58,20 +58,20 @@
                             android:id="@+id/textViewInboxSender1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
 
                         <TextView
                             android:id="@+id/textViewInboxdate1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textViewInboxMessage1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text=" " />
                 </LinearLayout>
 
                 <LinearLayout
@@ -88,20 +88,20 @@
                             android:id="@+id/textViewInboxsender2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
 
                         <TextView
                             android:id="@+id/textViewInboxdate2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textViewInboxMessage2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text=" " />
                 </LinearLayout>
 
                 <LinearLayout
@@ -118,20 +118,20 @@
                             android:id="@+id/textViewInboxsender3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
 
                         <TextView
                             android:id="@+id/textViewInboxdate3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textViewInboxmessage3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text=" " />
                 </LinearLayout>
 
                 <LinearLayout
@@ -148,20 +148,20 @@
                             android:id="@+id/textViewInboxsender4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
 
                         <TextView
                             android:id="@+id/textViewInboxdate4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textViewInboxmessage4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text=" " />
                 </LinearLayout>
 
                 <LinearLayout
@@ -178,20 +178,20 @@
                             android:id="@+id/textViewInboxsender5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
 
                         <TextView
                             android:id="@+id/textViewInboxdate5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textViewInboxmessage5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text=" " />
                 </LinearLayout>
 
                 <LinearLayout
@@ -208,20 +208,20 @@
                             android:id="@+id/textViewInboxsender6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
 
                         <TextView
                             android:id="@+id/textViewInboxdate6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textViewInboxmessage6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text=" " />
                 </LinearLayout>
 
                 <LinearLayout
@@ -238,20 +238,20 @@
                             android:id="@+id/textViewInboxsender7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
 
                         <TextView
                             android:id="@+id/textViewInboxdate7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textViewInboxMessage7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text=" " />
                 </LinearLayout>
 
                 <LinearLayout
@@ -268,20 +268,20 @@
                             android:id="@+id/textViewInboxSender8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
 
                         <TextView
                             android:id="@+id/textViewInboxdate8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text=" " />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textViewInboxMessage8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text=" " />
                 </LinearLayout>
             </LinearLayout>
 

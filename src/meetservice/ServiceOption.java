@@ -21,11 +21,17 @@ public class ServiceOption extends Activity {
 	private Button bqualify;
 	private Button bstate;
 	private TextView servicetitle;
+	private String servicecode;
+	private String userservicecod;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_service_option);
+		
+		Bundle bundle = getIntent().getExtras();
+		servicecode = bundle.getString("servicecode");
+		userservicecod = bundle.getString("userservicecod");
 
 		bmessages = (Button) findViewById(R.id.buttonServiceOptionsMensajes);
 		bqualify = (Button) findViewById(R.id.buttonServiceOptionsqualify);
@@ -33,6 +39,7 @@ public class ServiceOption extends Activity {
 		servicetitle = (TextView) findViewById(R.id.textView1ServiceOptionservice);
 
 		servicetitle.setText(UserGlobal.serviceactual.getName());
+		
 
 		bmessages.setOnClickListener(new OnClickListener() {
 
@@ -40,6 +47,8 @@ public class ServiceOption extends Activity {
 			public void onClick(View v) {
 				Intent intent = new Intent(ServiceOption.this,
 						InboxActivity.class);
+				intent.putExtra("servicecode", servicecode);
+				intent.putExtra("userservicecod", userservicecod);
 				startActivity(intent);
 			}
 		});

@@ -59,9 +59,11 @@ public class UserMain extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(UserMain.this, AdminServiceActivity.class);
+
+				Intent intent = new Intent(UserMain.this,CurrentServicesActivity.class);
 				startActivity(intent);
+				/*Intent intent = new Intent(UserMain.this, AdminServiceActivity.class);
+				startActivity(intent);*/
 			}
 		});
 		

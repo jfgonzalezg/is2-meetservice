@@ -10,6 +10,7 @@ import dao.ServiceDAO;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,13 +28,12 @@ public class ServiceSelectedActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_service_selected);
-		opciones = new String[5];
-		
-		opciones[0] = "Configurar Horario";
+		opciones = new String[4];
+
+		opciones[0] = "Ver Peticiones";
 		opciones[1] = "Habilitar/Deshabilitar";
-		opciones[2] = "Ver Peticiones";
-		opciones[3] = "Ver Calificaciones";
-		opciones[4] = "Ver Estadisticas";
+		opciones[2] = "Ver Calificaciones";
+		opciones[3] = "Ver Estadisticas";
 		listview = (ListView) findViewById(R.id.listViewServiceSelectedlist);
 
 		listview.setAdapter(new ArrayAdapter<String>(this,
@@ -46,7 +46,9 @@ public class ServiceSelectedActivity extends Activity {
 
 				switch (position) {
 				case 0: {
-						
+					Intent intent = new Intent(ServiceSelectedActivity.this,
+							ViewRequestServiceActivity.class);
+					startActivity(intent);
 					break;
 				}
 				case 1: {
@@ -58,10 +60,6 @@ public class ServiceSelectedActivity extends Activity {
 					break;
 				}
 				case 3: {
-
-					break;
-				}
-				case 4: {
 
 					break;
 				}
