@@ -7,6 +7,7 @@ public class Calification {
 	private int attention;
 	private int fulfillment;
 	private int cost;
+	private String comment;
 	
 	public Calification(){
 		
@@ -41,6 +42,14 @@ public class Calification {
 	}
 	public void setCost(int cost){
 		this.cost = cost;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
 }
